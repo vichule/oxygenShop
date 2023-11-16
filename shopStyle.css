@@ -169,8 +169,16 @@ header p{
     display: none;
 }
 
-#iphone{
+#iphone1{
     position: absolute;
+}
+
+#iphone2{
+    display: none;
+}
+
+#circlePhone2{
+    display: none;
 }
 
 .benefits__container h2 {
@@ -328,7 +336,7 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 2em 0em 0em 3em;
+    margin: 2em 0em 0em 2.5em;
 }
 
 .btn_profesional{
@@ -338,7 +346,7 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 25px 0px 0px 50px;
+    margin: 2em 0em 0em 3em;
 }
 
 .btn_premium{
@@ -348,7 +356,7 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 25px 0px 0px 50px;
+    margin: 2em 0em 0em 3em;
 }
 
 
@@ -644,10 +652,28 @@ header p{
     display: none;
 }
 
-#iphone{
-    margin: 5em 1em 0em 2em;
+#iphone1{
+    display: none;
 }
 
+#iphone2{
+    position: absolute;
+    display: block;
+    margin: 2em 0em 0em 3em;
+    z-index: 2;
+    width: 26%;
+}
+
+#circlePhone2{
+    display: block;
+    position: absolute;
+    width: 20%;
+    margin: 1em 1em 1em 2em; 
+}
+
+#circlePhone1{
+    display: none;
+}
 
 
 .benefits__container h2{
@@ -666,6 +692,12 @@ header p{
 
 #blue p{
     border-bottom: 4px solid #07ACE6;
+    margin: 1em 1em 1em 48em;
+}
+
+#blue h2{
+    margin: 1em 1em 1em 26em;
+    width: 15%;
 }
 
 #green p{
