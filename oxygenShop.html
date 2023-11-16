@@ -62,27 +62,29 @@
       </section>
 
       <section id="benefits">
-        <article class="benefits__container">
+        <article class="benefits__container" id="red">
           <img id="circleMac" src="images/Frame.png" >
+          <img id="recMac" src="images/Rectange.png" >
           <img id="mac" src="images/Macbook.png" >
+          <img id="mac2" src="images/Macbook2.png" >
           
           <h2>Be always first</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
         </article>
-        <article class="benefits__container">
+        <article class="benefits__container" id="blue">
           <img id="iphone" src="images/Iphone.png" height="" width="">
           <img src="images/Ellipse2B.png" height="" width="">
           <h2>Your shop is where you are!</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
         </article>
-        <article class="benefits__container">
-          <div>
+        <article class="benefits__container" id="green">
+          <div class="green1">
             <h2>Increase recognition your brand!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
           </div>
           
-          <div style="background-color: #55DFB4 ;">
-            <img src="images/Trumpet.png" >
+          <div class="green2" style="background-color: #55DFB4 ;">
+            <img src="images/Trumpet.png" id="trumpet">
           </div>
           
           
@@ -200,17 +202,20 @@
             
 
         </div>
-        <div class="contact__form">
-          <p>NAME</p>
-          <input type="text" name="name">
-          <p>EMAIL</p>
-          <input type="text" name="mail">
-        </div>
-        <div class="contact__consent">
-          <input id="checkbox" type="checkbox" name="consent">
-          <p id="checkboxP">
-            I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-          </p>
+
+        <div class="contact__form_container">
+          <div class="contact__form">
+            <p>NAME</p>
+            <input type="text" name="name">
+            <p>EMAIL</p>
+            <input type="text" name="mail">
+          </div>
+          <div class="contact__consent">
+            <input id="checkbox" type="checkbox" name="consent">
+            <p id="checkboxP">
+              I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+            </p>
+          </div>
         </div>
         <button class="contact_btn">Send</button>
       </section>

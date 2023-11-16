@@ -149,6 +149,10 @@ header p{
     padding: 40px 0px 20px 0px;
 }
 
+#recMac{
+    display: none;
+}
+
 #circleMac{
     z-index: 1;
     position: absolute;
@@ -159,6 +163,10 @@ header p{
     z-index: 2;
     position: relative;
     margin: 2em 0em 0em 0em;
+}
+
+#mac2{
+    display: none;
 }
 
 #iphone{
@@ -543,20 +551,12 @@ a{
     margin-right: 6em;
 }
 
-li:hover{
+.menu_container li:hover{
     border-bottom: 5px solid #08A6E4;
     color: black;
     
 }
 
-.footer__container_div1{
-    margin: 1em 0em 1em 8em;
-}
-
-.footer__container_div2{
-    margin: 3em 8em 2em 0em;
-
-}
 
 header p{
     width: 100%;
@@ -589,9 +589,59 @@ header p{
     width: 80%;
     margin: 1em 0em 1em 0em
 }
+#blue{
+    width: 80%;
+    margin: 1em 0em 1em 0em;
+    text-align: left;
+    padding: 4em 1em 1em 2em;
+}
+
+
+#green {
+    width: 80%;
+    display: inline-flex;
+    background: none;
+    padding: 0em 0em 1em 0em;
+}
+
+.green1{
+    background-color: white;
+    margin-right: 4em;
+}
+
+.green2{
+    background-color: #55DFB4;
+    width: 60%;
+    height: 100%;
+}
+
+#trumpet{
+    position: absolute;
+    width: 20%;
+    right: 20em;
+    margin-top: 7em;
+}
+
+#circleMac{
+    display: none;
+}
+
+#recMac{
+    display: inline-block;
+    z-index: 1;
+    position: absolute;
+    margin: 3em 0em 0em 11em;
+}
+
+#mac2{
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    margin: 7em 0em 0em 0em;
+}
 
 #mac{
-    position: absolute;
+    display: none;
 }
 
 #iphone{
@@ -601,12 +651,131 @@ header p{
 
 
 .benefits__container h2{
-    margin: 5em 1em 0em 2em;
+    margin: 5em 1em 0em 2.5em;
 }
 
 .benefits__container p{
     margin: 1em 0em 0em 5em;
     width: 29%;
+    padding-bottom: 4em;
+}
+
+#red p{
+    border-bottom: 4px solid #EB476E;
+}
+
+#blue p{
+    border-bottom: 4px solid #07ACE6;
+}
+
+#green p{
+    border-bottom: 4px solid #55DFB4;
+    width: 52%;
+}
+
+#prices{
+    margin-top: 5em;
+
+}
+
+
+.prices__container1{
+    width: 22%;
+    height: 430px;
+    margin-right: 5em;
+    padding: 5% 5% 10% 5%;
+    margin-top: 0em;
+}
+
+.prices__container1:hover{
+    height: 460px;
+    width: 330px;
+    padding: 6.5em 0em 0em 4.5em;  
+}
+
+.prices__container2{
+   width: 22%;
+   height: 430px; 
+   margin-right: 5em;
+   margin-top: 2em;
+}
+
+.prices__container2:hover{
+    height: 460px;
+    width: 330px;
+    padding: 6.5em 0em 0em 4.5em;
+}
+
+.prices__container3{
+    width: 22%;
+    height: 430px;
+    margin-top: 0em;
+}
+
+.prices__container3:hover{
+    height: 460px;
+    width: 330px;
+    padding: 6.5em 0em 0em 4.5em;
+}
+
+.prices__container_items1{
+    margin: 0em 0em 2em 2.5em;
+}
+
+.prices__container_items2{
+    margin: 1em 0em 1em 1em;
+}
+
+.btn_basic{
+    margin: 2.5em 0em 0em 1.5em;
+}
+
+.btn_profesional{
+    margin: 2.5em 0em 0em 1em;
+}
+
+.btn_premium{
+    margin: 2.5em 0em 0em 1.5em;
+}
+
+
+.contact__container {
+    display: inline-block;
+    margin-left: 15em;
+}
+.mail_container {
+    display: inline-block;
+}
+.phone_container {
+    display: inline-block;
+    margin-right: 6em;
+}
+
+.contact__form_container{
+    display: inline-block;
+    width: 40%;
+}
+
+.contact__form {
+    width: 80%;
+}
+
+.contact_btn {
+    margin: 2em 0em 3em 58em;
+}
+
+.footer__container {
+    box-shadow: 0px 0px 7px black;
+    border-top: 1px solid lightgrey;
+}
+
+.footer__container_div1{
+    margin: 1em 0em 1em 8em;
+}
+
+.footer__container_div2{
+    margin: 3em 8em 2em 0em;
+
 }
 
 }
