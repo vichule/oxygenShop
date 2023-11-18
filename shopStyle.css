@@ -337,7 +337,10 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 4em 0em 0em 5.5em;
+    /*margin: 4em 0em 0em 5.5em;*/
+    position: relative;
+    left: 5.5em;
+    top: 2.5em;
 }
 
 
@@ -349,7 +352,10 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 4em 0em 0em 5.5em;
+    /*margin: 4em 0em 0em 5.5em;*/
+    position: relative;
+    left: 5.5em;
+    top: 2.5em;
 }
 
 .btn_premium{
@@ -359,7 +365,10 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    margin: 4em 0em 0em 5.5em;
+    /*margin: 4em 0em 0em 5.5em;*/
+    position: relative;
+    left: 5.5em;
+    top: 2.5em;
 }
 
 
