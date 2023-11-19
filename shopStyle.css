@@ -48,7 +48,7 @@ button{
     letter-spacing: 5.96px;
     font-size: 20px;
     margin-top: 0.5em;
-    margin-bottom: 5%;
+    margin-bottom: 0.5em;
 }
 
 .menu{
@@ -82,7 +82,7 @@ button{
 .header_button{
     background: #08A6E4;
     color: white;
-    width: 310px;/*75% o 25em*/
+    width: 310px;/*si uso % el tamaño cambia demasiado*/
     height: 67px;
     border-radius: 40px;
     border: none;
@@ -108,13 +108,13 @@ header p{
 }
 
 #whyUs{
-    margin-left: 22%;
-    margin-right: 22%;
+    margin-left: 0em;
+    margin-right: 0em;
 }
 
 .whyUs__container{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .whyUs__container p{
@@ -141,13 +141,13 @@ header p{
 
 
 .benefits__container{
-    width: 314px;
+    width: 80%;
     height: 420px;
     display: inline-block;
-    margin-top: 8%;
+    margin-top: 3em;
     background: white;
-    margin-bottom: 10%;
-    padding: 40px 0px 20px 0px;
+    margin-bottom: 0em;
+    padding: 2em 0em 2em 0em;
 }
 
 #recMac{
@@ -184,12 +184,12 @@ header p{
 
 .benefits__container h2 {
     text-align: left;
-    margin: 15px 20px 20px 20px
+    margin: 1em 2em 1em 1em;
 }
 
 .benefits__container p {
     text-align: left;
-    margin: 15px 20px 20px 20px
+    margin: 1em 2em 1em 2em;
 }
 
 li p{
@@ -201,7 +201,7 @@ li p{
 }
 
 #prices{
-    margin-top: 10%;
+    margin-top: 3em;
 }
 
  .prices__container1{
@@ -343,7 +343,7 @@ li p{
     top: 2.5em;
 }
 
-
+/*a los buttons les he dejado la medida en px porque con % se descuadraban muchisimo*/
 
 .btn_profesional{
     width: 170px;
@@ -677,13 +677,11 @@ header p{
     display: block;
     margin: 2em 0em 0em 3em;
     z-index: 2;
-    width: 26%;
 }
 
 #circlePhone2{
     display: block;
     position: absolute;
-    width: 20%;
     margin: 1em 1em 1em 2em; 
 }
 
