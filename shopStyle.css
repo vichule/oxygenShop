@@ -37,6 +37,31 @@ button{
     cursor: pointer;
 }
 
+.border_red{
+    border: 1px solid #FB3B64;
+
+}
+
+.border_red:hover{
+    box-shadow: 0px 0px 20px #FB3B64;
+}
+
+.border_blue{
+    border: 1px solid #07ACE6;
+}
+
+.border_blue:hover{
+    box-shadow: 0px 0px 20px #07ACE6;
+}
+
+.border_green{
+    border: 1px solid #55DFB4;
+}
+
+.border_green:hover{
+    box-shadow: 0px 0px 20px #55DFB4;
+}
+
 #benefits{
     background-color: #F7F7F7;
 }
@@ -118,7 +143,9 @@ header p{
 }
 
 .whyUs__container p{
-    opacity: 0.4;
+    color: #A5A5A5;
+    width: 25%;
+    display: inline-block;
 }
 
 .whyUs_img1{
@@ -204,7 +231,35 @@ li p{
     margin-top: 3em;
 }
 
- .prices__container1{
+ .prices__container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    height: 307px;
+    padding: 2em 0em 0em 0em;
+    border-radius: 20px;
+    margin: 2em 0em 2em 0em;
+    position: relative;
+ }
+
+ .prices__container:hover{
+    height: 340px;
+    width: 90%;
+    padding: 4em 1em 0em 1em;
+    /*box-shadow: 0px 0px 20px #FB3B64;*/
+ }
+
+ .prices__container li {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    margin: 0em 0em 2em 1em;
+ }
+
+ /*.prices__container1{
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
@@ -261,7 +316,7 @@ li p{
     width: 90%;
     padding: 4em 1em 0em 1em;
     box-shadow: 0px 0px 20px #55DFB4;
- }
+ }*/
     
 
 .prices__container_items2{
@@ -337,11 +392,12 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    /*margin: 4em 0em 0em 5.5em;*/
-    position: relative;
-    left: 5em;
-    top: 2.5em;
+    position: absolute;
+    top: 91%;
+    left: 22%;
 }
+
+
 
 /*a los buttons les he dejado la medida en px porque con % se descuadraban muchisimo*/
 
@@ -352,11 +408,12 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    /*margin: 4em 0em 0em 5.5em;*/
-    position: relative;
-    left: 5em;
-    top: 2.5em;
+    position: absolute;
+    top: 91%;
+    left: 22%;
 }
+
+
 
 .btn_premium{
     width: 170px;
@@ -365,11 +422,11 @@ li p{
     color: white;
     border-radius: 30px;
     border: none;
-    /*margin: 4em 0em 0em 5.5em;*/
-    position: relative;
-    left: 5em;
-    top: 2.5em;
+    position: absolute;
+    top: 91%;
+    left: 22%;
 }
+
 
 
 
@@ -409,7 +466,7 @@ li p{
 
 .mail_container{
     text-align: left;
-    margin: 2em 0em 1em 2em;
+    margin: 1em 0em 0.5em 2em;
 }
 
 .mail_container p{
@@ -426,7 +483,7 @@ li p{
 
 .phone_container{
     text-align: left;
-    margin-left: 2em;
+    margin: 1em 0em 0.5em 2em;
 }
 
 .phone_container p{
@@ -459,6 +516,8 @@ li p{
     border: none;
     border-bottom: 1px solid #95989A;
     text-align: left;
+    margin-bottom: 2em;
+    margin-top: 1em;
 }
 
 .contact__consent{
@@ -600,6 +659,10 @@ header p{
     margin: 10em 5em 10em 5em;
 }
 
+.whyUs__container p {
+    width: 75%;
+}
+
 .whyUs_img13{
     margin: 0.5em 0em 1em 2em;
 }
@@ -725,7 +788,23 @@ header p{
 }
 
 
-.prices__container1{
+.prices__container{
+    width: 22%;
+    height: 430px;
+    padding: 2em 2em 0em 3em;
+    margin: 3em 3em 0em 4em;
+}
+
+.prices__container:hover{
+    height: 460px;
+    width: 23%;
+    padding: 2.5em 0em 0em 3.5em;  
+}
+
+prices__container li {
+    margin: 0em 0em 2em 2em;
+}
+/*.prices__container1{
     width: 22%;
     height: 430px;
     margin-right: 5em;
@@ -764,7 +843,7 @@ header p{
     height: 460px;
     width: 23%;
     padding: 2.5em 0em 0em 3.5em;
-}
+}*/
 
 .prices__container_items1{
     margin: 0em 0em 2em 2.5em;
@@ -784,25 +863,40 @@ header p{
 }
 
 .btn_basic{
-    left: 3em;
-    top: 2em;
+    left: 25%;
+    top: 95%;
 }
 
 .btn_profesional{
-    left: 3em;
-    top: 2em;
+    left: 25%;
+    top: 95%;
 }
 
 .btn_premium{
-    left: 3em;
-    top: 2em;
+    left: 25%;
+    top: 95%;
 }
 
-
-.contact__container {
-    display: inline-block;
-    margin-left: 10em;
+#contact{
+    margin-top: 15em;
+    display: flex;
+    justify-content: center;
+    padding-left: 12em;
 }
+
+.contact__container  {
+}
+
+.contact__container_title h2 {
+    
+    margin-bottom: 0.5em;
+}
+
+.contact__container_title p {
+    
+    margin-bottom: 1em;
+}
+
 .mail_container {
     display: inline-block;
 }
@@ -813,7 +907,7 @@ header p{
 
 .contact__form_container{
     display: inline-block;
-    width: 40%;
+    width: 50%;
 }
 
 .contact__form {
@@ -821,7 +915,7 @@ header p{
 }
 
 .contact_btn {
-    margin: 2em 0em 3em 58em;
+    margin: 2em 0em 3em 8em;
 }
 
 .footer__container {
