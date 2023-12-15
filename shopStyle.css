@@ -4,6 +4,10 @@
     padding: 0;
     text-align: center;
 }
+
+html{
+    scroll-behavior: smooth;
+}
 body {
     min-width: 320px;
 }
@@ -35,6 +39,44 @@ li{
 
 button{
     cursor: pointer;
+}
+
+.height12{
+    height: 12em;
+}
+
+.popUp {
+    position: sticky;
+    z-index: 1000;
+    top: 25%;
+    background-color: white;
+    height: 18em;
+    padding: 3em 1em 1em 1em;
+    width: 21em;
+    left: 5%;
+    border: 3px solid black;
+}
+
+#btnPopup{
+    width: 2em;
+    height: 2em;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    bottom: 2.5em;
+}
+
+.subscribe_btn{
+    background: #08A6E4;
+    color: white;
+    width: 15em;
+    height: 3em;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 5px 10px 14px 0px #07ACE64A;
+    margin: 2em 0em 1em 0em;
+    font-family: 'Open Sans';
+    font-weight: 700;
 }
 
 .h-estandar{
@@ -74,6 +116,10 @@ button{
     box-shadow: 0px 0px 20px #55DFB4;
 }
 
+.hidden{
+    display: none;
+}
+
 #benefits{
     background-color: #F7F7F7;
 }
@@ -88,16 +134,40 @@ button{
     margin-bottom: 0.5em;
 }
 
+
+
 .menu{
     box-shadow: 0px 5px 5px lightgrey;
-    position: static;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
     padding-bottom: 1em;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
 }
+
+
+.menu_container a {
+    text-decoration: none;
+    color: #A5A5A5;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+}
+
+.menu_container li:hover{
+    color: black;
+    
+}
+
 .menu_container{
-    display: none;
+    position: absolute;
+    top: 4em;
+    left: 1em;
 }
 
 .menu_button{
@@ -105,6 +175,8 @@ button{
     background-color: white;
     margin-left: 8em;
 }
+
+
 
 .menu_title{
     font-family: Raleway;
@@ -114,7 +186,22 @@ button{
     display: inline-block;
 }
 
+.progress-bar{
+   
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+}
 
+.progress-bar-content{
+    position: relative;
+    background-color: #08A6E4;
+    width: 0%;
+    padding: 0%;
+    height: 3px;
+}
 
 .header_button{
     background: #08A6E4;
@@ -142,6 +229,18 @@ header p{
     font-weight: 400;
     display: inline-block;
     width: 65%;
+}
+
+.btn_return{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border: none;
+    background-color: white;
+    width: 4em;
+    height: 4em;
+    z-index: 100;
+    border-radius: 28px;
 }
 
 #whyUs{
@@ -570,11 +669,126 @@ li p{
 
 }
 
+
+/* slider */
+
+#slider{
+    display: none;
+}
+
+.slideshow-container {
+    max-width: 70%;
+    position: relative;
+    /* margin: auto; */
+    display: inline-block;
+    /* margin-left: 470px; */
+    margin-top: 10em;
+    max-height: 54em;
+    width: 70%;
+    background-color: black;
+
+}
+
+.Containers {
+    /* margin: 80px; */
+    margin-top: 4.5em;
+    width: 100%;
+    height: 60em;
+}
+
+.Back, .forward {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    /* margin-top: -23px; */
+    padding: 22px;
+    color: grey;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.4s ease;
+    border-radius: 2em;
+    user-select: none;
+    bottom: 20em;
+    background-color: black;
+    border: 5px solid lightgrey;
+}
+
+.forward {
+  right: -4em;
+}
+
+.Back{
+    left: 1em;
+}
+
+.Back:hover, .forward:hover {
+  background-color: white;
+  /*background-color: rgba(0,0,0,0.8);*/
+}
+
+
+.dotsLine {
+    position: relative;
+    bottom: 2em;
+
+}
+
+.dots {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0.2em;
+  background-color: #717161; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: white;
+}
+
+
+#imgCarousel {
+    display: inline-block;
+    width: 100%;
+    height: 75%;
+
+}
+
+#coin-select{
+    background-color: #08A6E4;
+    color: white;
+    height: 2em;
+    width: 5em;
+    border: none;
+    margin-top: 1em;
+}
+
+/* problemas con dos clases */
+@media only screen and (min-width: 50px) {
+
+    .h-estandar{
+        font-family: Raleway;
+        font-weight: 400;
+    }
+
+    .p-estandar{
+        font-family: Open Sans;
+        font-weight: 400;
+    }
+}
+
+
 /*A partir de aquí, estilo para pantallas grandes desktop --------------------------------------------------------------------------------------*/
 
 
 
 @media only screen and (min-width: 1250px) {
+
+#slider{
+    display: block;
+}
 
 .menu{
     justify-content: space-between;
@@ -588,6 +802,7 @@ li p{
 
 .menu_container{
     display: inline-block;
+    position: static;
 }
 
 nav ul {
@@ -624,6 +839,14 @@ li{
 
 header p{
     width: 100%;
+}
+
+.popUp{
+
+    top: 50%;
+    height: 15em;
+    width: 25em;
+    left: 40%;
 }
 
 #whyUs{

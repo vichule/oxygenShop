@@ -6,17 +6,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="shopStyle.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" type="text/javascript" defer></script>
   </head>
   <body>
-    
+      
 
       <nav class="menu">
         <h2 class="menu_title">OXYGENShop</h2>
-        <button class="menu_button">
-          <img src="images/Menu.png">
+        <button onclick="menuDrop()" class="menu_button">
+          <img id="menuClosed" src="images/Menu.png">
+          <img class="hidden" id="menuOpened" src="images/crossMenu.png">
         </button>
         
-        <div class="menu_container">
+        <div class="menu_container hidden">
           <ul>
             <a href="#whyUs"><li>WHY US</li></a>
             <a href="#benefits"><li>BENEFITS</li></a>
@@ -24,7 +26,27 @@
             <a href="#contact"><li>CONTACT</li></a>
           </ul>
         </div>
+        <div class="progress-bar">
+          <div class="progress-bar-content"></div>
+        </div>
       </nav>
+
+      <div class="popUp hidden">
+        <button onclick="closePopup()" id="btnPopup"><img  src="images/crossMenu.png"></button>
+        <div id="popUp_container">
+          <h2 class="h-estandar">Subscribe to our newsletter!</h2>    
+          <form onsubmit="subscribePop(event)">
+            <div>
+              <p class="p-estandar">EMAIL</p>
+              <input type="email" name="mail" id="emailPop">
+            </div>
+            <button class="subscribe_btn" type="submit">Send</button>
+          </form>
+        </div>
+        <div id="popUp_confirmMessage" class="hidden">
+          <h2 class="h-estandar">Thank you very much for your time!</h2> 
+        </div>
+      </div>
 
     <header>
       <div>
@@ -34,6 +56,12 @@
         <img src="images/Background.png" width="100%">
       </div>
     </header>
+
+    <button onclick="topReturn()" class="btn_return">
+      <img src="images/circle-up-solid.svg" style="width: 50px">
+    </button>
+
+    
 
     <div class="main">
       <section id="whyUs">
@@ -110,10 +138,20 @@
 
       <section id="prices">
         <h2 class="h-estandar">Pricing</h2>
+        <div id="selector_container">
+          <label for="coin-select"></label>
+          <select name="coins" id="coin-select" onchange="getCoinValue(this)">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+          </select>
+        </div>
+        
+
         <article class="prices__container border_red">
           <div class="prices__container_items1">
             <p class="prices__choice">Basic</p>
-            <p class="prices__price1 p-estandar">$0</p>
+            <p class="prices__price1 p-estandar" id="priceVal1">$0</p>
           </div>
           <div class="prices__container_items2">
             <ul>
@@ -139,7 +177,7 @@
         <article class="prices__container border_blue">
           <div class="prices__container_items1">
             <p class="prices__choice2">Profesional</p>
-            <p class="prices__price2 p-estandar">$25</p>
+            <p class="prices__price2 p-estandar" id="priceVal2">$25</p>
             <p class="limited_offer">Limited offer</p>
           </div>
           <div class="prices__container_items2">
@@ -167,7 +205,7 @@
         <article class="prices__container border_green">
           <div class="prices__container_items1">
             <p class="prices__choice3">Premium</p>
-            <p class="prices__price3 p-estandar">$60</p>
+            <p class="prices__price3 p-estandar" id="priceVal3">$60</p>
             <p class="limited_offer">Limited offer</p>
           </div>
           <div class="prices__container_items2">
@@ -197,6 +235,45 @@
           
       </section>
 
+      <section id="slider">                                                       <!--prueba slider-->
+        <div class="slideshow-container fade">
+
+          <div class="Containers">
+            <img id="imgCarousel" src="images/slider1.jpg">
+          </div>
+
+          <div class="Containers">
+            <img id="imgCarousel" src="images/slider2.jpg">
+          </div>
+
+          <div class="Containers">
+            <img id="imgCarousel" src="images/slider3.jpg">
+          </div>
+
+          <div class="Containers">
+            <img id="imgCarousel" src="images/slider4.jpg">
+          </div>
+
+          <div class="Containers">
+            <img id="imgCarousel" src="images/slider5.jpg">
+          </div>
+
+          <!-- buttons -->
+          <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- circles -->
+        <div class="dotsLine">
+          <span class="dots" onclick="currentSlide(1)"></span>
+          <span class="dots" onclick="currentSlide(2)"></span>
+          <span class="dots" onclick="currentSlide(3)"></span>
+          <span class="dots" onclick="currentSlide(4)"></span>
+          <span class="dots" onclick="currentSlide(5)"></span>
+        </div> 
+      </section>                  <!-- fin slider -->
+
       <section id="contact">
         <div class="contact__container">
           <div class="contact__container_title">
@@ -221,12 +298,12 @@
 
         </div>
 
-        <form class="contact__form_container">
+        <form class="contact__form_container" onsubmit="validateForm(event)">
           <div class="contact__form">
             <p class="p-estandar">NAME</p>
-            <input type="text" name="name">
+            <input id="name" type="text" name="name">
             <p class="p-estandar">EMAIL</p>
-            <input type="email" name="mail">
+            <input id="email" type="email" name="mail">
           </div>
           <div class="contact__consent">
             <input id="checkbox" type="checkbox" name="consent">
@@ -234,7 +311,7 @@
               I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
             </p>
           </div>
-          <button class="contact_btn">Send</button>
+          <button class="contact_btn" type="submit">Send</button>
         </form>
         
       </section>
