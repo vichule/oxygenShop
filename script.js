@@ -323,11 +323,11 @@ function validateInput(event){
 				  		price2.innerHTML = "$" +  Math.round(finalValue)
 				  	}else if(currency == "eur"){
 				  		finalValue = initialValue * eur
-				  		price2.innerHTML = "$" +  Math.round(finalValue)
+				  		price2.innerHTML = "€" +  Math.round(finalValue)
 
 				  	}else if ( currency == "gbp"){
 				  		finalValue = initialValue * gbp
-				  		price2.innerHTML = "$" +  Math.round(finalValue)
+				  		price2.innerHTML = "£" +  Math.round(finalValue)
 				  		
 				  	}
 
@@ -337,11 +337,11 @@ function validateInput(event){
 				  		price3.innerHTML = "$" +  Math.round(finalValue)
 				  	}else if(currency == "eur"){
 				  		finalValue = initialValue * eur
-				  		price3.innerHTML = "$" +  Math.round(finalValue)
+				  		price3.innerHTML = "€" +  Math.round(finalValue)
 
 				  	}else if ( currency == "gbp"){
 				  		finalValue = initialValue * gbp
-				  		price3.innerHTML = "$" +  Math.round(finalValue)
+				  		price3.innerHTML = "£" +  Math.round(finalValue)
 			  		
 			  		}
 			  	}
