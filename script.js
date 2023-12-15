@@ -13,9 +13,9 @@ const emailPopup = document.getElementById('emailPop')
 const checkbox = document.getElementById('checkbox')
 const menu = document.querySelector('.menu')
 const buttonSubscribe = document.querySelector('.subscribe_btn')
-const price1 = document.getElementById('priceVal1')
-const price2 = document.getElementById('priceVal2')
-const price3 = document.getElementById('priceVal3')
+let price1 = document.getElementById('priceVal1')
+let price2 = document.getElementById('priceVal2')
+let price3 = document.getElementById('priceVal3')
 		
 
 let dropdown = false;
@@ -275,27 +275,118 @@ function validateInput(event){
 
 
 		 function getCoinValue(selectObject){
+		 	//let result1 
+		 	//let result2
+
 
 			if(selectObject.value == 'usd'){
 				console.log('USD$')
+				calcCoin(25,"usd")
+				calcCoin(60,"usd")
 				price1.innerHTML = "$" + "0"
-				price2.innerHTML = "$" + "25"
-				price3.innerHTML = "$" + "60"
+				//price2.innerHTML = "$" +  calcCoin(25, "usd")//25 * 1.08917103 = 27.22927575 = 27
+				//price3.innerHTML = "$" + "60"  //60 * 1.08917103 = 65.3502618 = 65
+				
 
 			}else if(selectObject.value == 'eur'){
 				console.log('EUR€')
+				calcCoin(25,"eur")
+				calcCoin(60,"eur")
 				price1.innerHTML = "€" + "0"
-				price2.innerHTML = "€" + "25"
-				price3.innerHTML = "€" + "60"
+				//price2.innerHTML = "€" + calcCoin(25, "eur") // 25 * 1
+				//price3.innerHTML = "€" + "60"  //60 * 1 
 			}else if(selectObject.value == 'gbp'){
 				console.log('GBP£')
+				calcCoin(25,"gbp")
+				calcCoin(60,"gbp")
 				price1.innerHTML = "£" + "0"
-				price2.innerHTML = "£" + "25"
-				price3.innerHTML = "£" + "60"
+				//price2.innerHTML = "£" + calcCoin(25, "gbp") //25 * 0.86212713 = 21.55317825 = 22
+				//price3.innerHTML = "£" + "60" // 60 * 0.86212713 = 51.7276278 = 52
 			}
 
 		}
 
-		function calcCoin(){
-			
+
+		function calcCoin(initialValue,currency){
+			fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
+			  .then((response) => response.json())
+			  .then((json) => {
+			  	let dataArray = json.eur
+			  	let gbp = dataArray.gbp
+			  	let usd = dataArray.usd
+			  	let eur = dataArray.eur
+			  	let finalValue
+
+			  	if(initialValue === 25){
+			  		if(currency == "usd"){
+				  		finalValue = initialValue * usd
+				  		price2.innerHTML = "$" +  Math.round(finalValue)
+				  	}else if(currency == "eur"){
+				  		finalValue = initialValue * eur
+				  		price2.innerHTML = "$" +  Math.round(finalValue)
+
+				  	}else if ( currency == "gbp"){
+				  		finalValue = initialValue * gbp
+				  		price2.innerHTML = "$" +  Math.round(finalValue)
+				  		
+				  	}
+
+			  	}else if(initialValue === 60){
+			  		if(currency == "usd"){
+				  		finalValue = initialValue * usd
+				  		price3.innerHTML = "$" +  Math.round(finalValue)
+				  	}else if(currency == "eur"){
+				  		finalValue = initialValue * eur
+				  		price3.innerHTML = "$" +  Math.round(finalValue)
+
+				  	}else if ( currency == "gbp"){
+				  		finalValue = initialValue * gbp
+				  		price3.innerHTML = "$" +  Math.round(finalValue)
+			  		
+			  		}
+			  	}
+
+
+			  	/*console.log(gbp)
+			  	console.log(usd)
+			  	console.log(eur)*/
+			  	/*if(currency == "usd"){
+			  		finalValue = initialValue * usd
+			  	}else if(currency == "eur"){
+			  		finalValue = initialValue * eur
+			  	}else if(currency == "gbp"){
+			  		finalValue = initialValue * gbp
+			  	}
+			  	let finalValueRound = Math.round(finalValue)
+			  	//console.log(finalValueRound)
+			  	return finalValueRound*/
+
+			 	});
+
 		}
+
+		const calcCoinApi = async (initialValue,currency) => {
+			const request = await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
+			const json = await request.json()
+			let dataArray = json.eur
+			let gbp = dataArray.gbp
+	  	let usd = dataArray.usd
+	  	let eur = dataArray.eur
+	  	let finalValue
+	  	/*console.log(gbp)
+	  	console.log(usd)
+	  	console.log(eur)*/
+	  	if(currency == "usd"){
+	  		finalValue = initialValue * usd
+	  	}else if(currency == "eur"){
+	  		finalValue = initialValue * eur
+	  	}else if(currency == "gbp"){
+	  		finalValue = initialValue * gbp
+	  	}
+	  	let finalValueRound = Math.round(finalValue)
+	  	//console.log(finalValueRound)
+	  	return finalValueRound
+		}
+
+
+		
