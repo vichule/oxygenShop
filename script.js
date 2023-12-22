@@ -296,7 +296,7 @@ let dropdown = false;
 
 		function SlideShow(n) {
 		  let i;
-		  let slides = document.getElementsByClassName("Containers");
+		  let slides = document.getElementsByClassName("containers");
 		  let circles = document.getElementsByClassName("dots");
 
 		  if (n > slides.length) {
