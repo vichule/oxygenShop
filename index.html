@@ -13,7 +13,7 @@
 
       <nav class="menu">
         <h2 class="menu_title">OXYGENShop</h2>
-        <button onclick="menuDrop()" class="menu_button">
+        <button  class="menu_button">
           <img id="menuClosed" src="images/Menu.png">
           <img class="hidden" id="menuOpened" src="images/crossMenu.png">
         </button>
@@ -31,14 +31,14 @@
         </div>
       </nav>
 
-      <div class="popUp hidden">
-        <button onclick="closePopup()" id="btnPopup"><img  src="images/crossMenu.png"></button>
+      <div id="popUp" class="popUp hidden">
+        <button  id="btnPopup"><img  src="images/crossMenu.png"></button>
         <div id="popUp_container">
           <h2 class="h-estandar">Subscribe to our newsletter!</h2>    
-          <form onsubmit="subscribePop(event)">
+          <form id="formPop" >
             <div>
               <p class="p-estandar">EMAIL</p>
-              <input type="email" name="mail" id="emailPop">
+              <input  name="mail" id="emailPop">
             </div>
             <button class="subscribe_btn" type="submit">Send</button>
           </form>
@@ -57,7 +57,7 @@
       </div>
     </header>
 
-    <button onclick="topReturn()" class="btn_return">
+    <button  class="btn_return">
       <img src="images/circle-up-solid.svg" style="width: 50px">
     </button>
 
@@ -140,7 +140,7 @@
         <h2 class="h-estandar">Pricing</h2>
         <div id="selector_container">
           <label for="coin-select"></label>
-          <select name="coins" id="coin-select" onchange="getCoinValue(this)">
+          <select name="coins" id="coin-select" >
             <option value="eur">EUR</option>
             <option value="usd">USD</option>
             <option value="gbp">GBP</option>
@@ -235,7 +235,7 @@
           
       </section>
 
-      <section id="slider">                                                       <!--prueba slider-->
+      <section id="slider">                                                       
         <div class="slideshow-container fade">
 
           <div class="Containers">
@@ -258,21 +258,19 @@
             <img id="imgCarousel" src="images/slider5.jpg">
           </div>
 
-          <!-- buttons -->
-          <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+          <a class="Back" id="backArrow" >&#10094;</a>
+          <a class="forward" id="forwardArrow" >&#10095;</a>
         </div>
         <br>
 
-        <!-- circles -->
         <div class="dotsLine">
-          <span class="dots" onclick="currentSlide(1)"></span>
-          <span class="dots" onclick="currentSlide(2)"></span>
-          <span class="dots" onclick="currentSlide(3)"></span>
-          <span class="dots" onclick="currentSlide(4)"></span>
-          <span class="dots" onclick="currentSlide(5)"></span>
+          <span class="dots" id="dot1" ></span>
+          <span class="dots" id="dot2" ></span>
+          <span class="dots" id="dot3" ></span>
+          <span class="dots" id="dot4" ></span>
+          <span class="dots" id="dot5" ></span>
         </div> 
-      </section>                  <!-- fin slider -->
+      </section>   
 
       <section id="contact">
         <div class="contact__container">
@@ -298,12 +296,12 @@
 
         </div>
 
-        <form class="contact__form_container" onsubmit="validateForm(event)">
+        <form class="contact__form_container" id="formMain">
           <div class="contact__form">
             <p class="p-estandar">NAME</p>
             <input id="name" type="text" name="name">
             <p class="p-estandar">EMAIL</p>
-            <input id="email" type="email" name="mail">
+            <input id="email" name="mail">
           </div>
           <div class="contact__consent">
             <input id="checkbox" type="checkbox" name="consent">

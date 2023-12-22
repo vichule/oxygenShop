@@ -10,6 +10,7 @@ const popUpMessage = document.getElementById('popUp_confirmMessage')
 const name = document.getElementById('name')
 const email = document.getElementById('email')
 const emailPopup = document.getElementById('emailPop')
+const btnClosePop = document.getElementById('btnPopup')
 const checkbox = document.getElementById('checkbox')
 const menu = document.querySelector('.menu')
 const buttonSubscribe = document.querySelector('.subscribe_btn')
@@ -20,226 +21,145 @@ let price3 = document.getElementById('priceVal3')
 
 let dropdown = false;
 
-window.addEventListener('scroll', function(){
 
-	let body = document.documentElement;
+		window.addEventListener('scroll', function(){
 
-	let scrollT = body.scrollTop || document.body.scrollTop;
-	let scrollH = body.scrollHeight || document.body.scrollHeight;
+			let body = document.documentElement;
 
-	let percent = scrollT / (scrollH - body.clientHeight) * 100;
-	let roundPercent = Math.round(percent);
+			let scrollT = body.scrollTop || document.body.scrollTop;
+			let scrollH = body.scrollHeight || document.body.scrollHeight;
 
-	progressbarcontent.style.width = percent + '%';
+			let percent = scrollT / (scrollH - body.clientHeight) * 100;
+			let roundPercent = Math.round(percent);
 
-	if(roundPercent === 25){
-		showPopup();
-	}
+			progressbarcontent.style.width = percent + '%';
 
-	//console.log(roundPercent);
-})	
+			if(roundPercent === 25){
+				showPopup();
+			}
+
+		})	
 
 
-function topReturn() {
-  document.body.scrollTop = 0; 
-  document.documentElement.scrollTop = 0; 
+		buttonReturn.addEventListener('click', function(){
+			document.body.scrollTop = 0; 
+		  	document.documentElement.scrollTop = 0;
 
-}
+		})
 
-buttonMenu.addEventListener('click', function(){
-	console.log('dropdown menu');
-});
+		buttonMenu.addEventListener('click', function(){
+			
+			if(!dropdown){
 
-function menuDrop(){
+				hiddenMenu.classList.remove('hidden');
+				crossMenu.classList.remove('hidden');
+				barsMenu.classList.add('hidden');
+				menu.classList.add('height12')
+				dropdown = true;
+			}else{
+				hiddenMenu.classList.add('hidden');
+				crossMenu.classList.add('hidden');
+				barsMenu.classList.remove('hidden');
+				menu.classList.remove('height12')
+				dropdown = false;
+			}
+		});
 
-	if(!dropdown){
 
-		hiddenMenu.classList.remove('hidden');
-		crossMenu.classList.remove('hidden');
-		barsMenu.classList.add('hidden');
-		menu.classList.add('height12')
-		dropdown = true;
-	}else{
-		hiddenMenu.classList.add('hidden');
-		crossMenu.classList.add('hidden');
-		barsMenu.classList.remove('hidden');
-		menu.classList.remove('height12')
-		dropdown = false;
-	}
+		function showPopup(){
+			if(localStorage.getItem('popup') != 'false'){
+				popUp.classList.remove('hidden');
+			}
+			
+		}
+
+		setTimeout(()=>{showPopup()},5000)
+
+		function closePopup(){
+			popUp.classList.add('hidden');
+			localStorage.setItem('popup', false);
+		}
+
+
+		btnClosePop.addEventListener('click', function(){
+			closePopup();
+		});
+
+		document.addEventListener('keydown', function(event) {
+		    const key = event.key; 
+		    if (key === "Escape") {
+		        closePopup();
+		    }
+		});
+
+
+		window.addEventListener('click', function(event) {
+	      if (!popUp.contains(event.target)) {
+	        closePopup();
+	      }
+	    });
+
 	
-}
+		function validateEmail(input) {
+		    let patron = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		    let isValid = input.value.match(patron);
 
-function showPopup(){
-		if(localStorage.getItem('popup') == 'false'){
-			
-			console.log('no publi!')
-		}else{
-			popUp.classList.remove('hidden');
-		}
-	
-}
+		    if (isValid) {
+		        input.style.borderColor = '#08A6E4';
+		    } else {
+		        input.style.borderColor = 'red';
+		    }
 
-//setTimeout("showPopup()", 5000);
-
-setTimeout(()=>{showPopup()},5000)
-
-
-function closePopup(){
-	popUp.classList.add('hidden');
-	localStorage.setItem('popup', false);
-}
-
-document.addEventListener('keydown', function(event) {
-    const key = event.key; 
-    if (key === "Escape") {
-        closePopup();
-    }
-});
-
-
-/*document.getElementsByTagName("body")[0].addEventListener('click', function() {
-	//console.log('clicked') 
-	closePopup(); 
-});
-*/  /* Si clickeo en el modal, tambien se cierra, hay que revisarlo*/
-
-function validateInput(event){
-			let input = event.target;
-			let div = input.parentElement;
-			let patron = "";
-			switch(input.id){
-
-				/*case "name":
-				patron = /^[\p{Z}\s]*(?:[^\p{Z}\s][\p{Z}\s]*){2,100}$/   */
-
-				case "email":
-				patron = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-				
-				case "emailPop":
-				patron = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-				break;
-
-			}
-
-			let correct = input.value.match(patron);
-			if(correct){
-				console.log('correcto');
-				input.style.borderColor ='#08A6E4';
-			}else{
-				console.log('incorrecto');
-				input.style.borderColor ='red';
-			}	
-
-			if(name.value.length < 2 || name.value.length > 100){
-				console.log('incorrecto');
-				name.style.borderColor ='red';
-			}else{
-				console.log('correcto');
-				name.style.borderColor ='#08A6E4';
-			}
+		    return isValid;
 		}
 
-		
+		function validateName(input) {
+		    let isValid = input.value.length >= 2 && input.value.length <= 100;
 
-		function validateForm(event){
-			
-			if(checkbox.checked){
-				console.log('checkbox checked');
-				postData();
-				alert('Thank you for your time!')
-				name.value = '';
-				name.style.borderColor = '#95989A'
-				email.value = '';
-				email.style.borderColor = '#95989A'
-				checkbox.checked = false;
-			}else{
-				console.log('checkbox is not checked');
-				alert("To continue you have to check the checkbox!");
-			}
-			
+		    if (isValid) {
+		        input.style.borderColor = '#08A6E4';
+		    } else {
+		        input.style.borderColor = 'red';
+		    }
 
-
-			event.preventDefault();
+		    return isValid;
 		}
 
-		function subscribePop(event){
-			popUpContainer.classList.add('hidden');
-			popUpMessage.classList.remove('hidden');
-			event.preventDefault();
-			postDataPop();
-			//alert('Thank you, your data its safe now')
-			emailPopup.value = '';
-			emailPopup.style.borderColor = '#95989A'
-		}
+		document.getElementById('formPop').addEventListener('submit',function(event) {
+			event.preventDefault();  
+    		let emailIsValid = validateEmail(emailPopup);
 
-		/*buttonSubscribe.addEventListener('click', function(){
+		    if (emailIsValid) {
+		        popUpContainer.classList.add('hidden');
+				popUpMessage.classList.remove('hidden');
+				event.preventDefault();
+				postDataPop();
+		    } else {
+		        alert("Please complete all fields and check the box.");
+		    }
+		  
+		}); 
 
-			event.preventDefault();
-		});*/
+		document.getElementById('formMain').addEventListener('submit',function(event){
 
+		    let emailIsValid = validateEmail(email);
+		    let nameIsValid = validateName(name);
 
-		name.onchange = validateInput;
-		email.onchange = validateInput;
-		emailPopup.onchange = validateInput;
+		    if (nameIsValid && emailIsValid && checkbox.checked) {
+		        	postData();
+					alert('Thank you for your time!')
+					name.value = '';
+					name.style.borderColor = '#95989A'
+					email.value = '';
+					email.style.borderColor = '#95989A'
+					checkbox.checked = false;
+		    } else {
+		        alert("Please complete all fields and check the box.");
+		    }
 
+		    event.preventDefault();
+		});
 
-		/*slider*/
-
-		let slidePosition = 1;
-		SlideShow(slidePosition);
-
-		// forward/Back controls
-		function plusSlides(n) {
-		  SlideShow(slidePosition += n);
-		}
-
-		//  images controls
-		function currentSlide(n) {
-		  SlideShow(slidePosition = n);
-		}
-
-		function SlideShow(n) {
-		  let i;
-		  let slides = document.getElementsByClassName("Containers");
-		  let circles = document.getElementsByClassName("dots");
-
-		  if (n > slides.length) {
-		  	slidePosition = 1
-		  }
-
-		  if (n < 1) {
-		  	slidePosition = slides.length
-		  }
-
-		  for (i = 0; i < slides.length; i++) {
-
-		      slides[i].style.display = "none";
-		  }
-		  for (i = 0; i < circles.length; i++) {
-
-		      circles[i].className = circles[i].className.replace(" enable", "");
-		  }
-
-		  slides[slidePosition-1].style.display = "block";
-		  circles[slidePosition-1].className += " enable";
-		} 
-
-
-
-
-		/*function postData(data) {
-		  fetch('https://jsonplaceholder.typicode.com/posts/1', {
-		    method: 'POST', 
-		    body: JSON.stringify(data), 
-		    headers:{
-		      'Content-type': 'application/json; charset=UTF-8',
-		    },
-		  })
-		  .then(response => response.json())
-		  .then(data => console.log(data));
-		}
-
-		const data = {username: name.value, email: email.value};*/
 
 		function postData(){
 			fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -255,7 +175,7 @@ function validateInput(event){
 		  .then((response) => response.json())
 		  .then((json) => console.log(json));
 
-		}																					/*Parece que la id se sobreescribe */
+		}																				
 
 		function postDataPop(){
 			fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -273,38 +193,27 @@ function validateInput(event){
 		}
 		
 
+		document.getElementById('coin-select').addEventListener('change', function() {
+			let selectedCurrency = this.options[this.selectedIndex]
 
-		 function getCoinValue(selectObject){
-		 	//let result1 
-		 	//let result2
-
-
-			if(selectObject.value == 'usd'){
-				console.log('USD$')
+			if(selectedCurrency.value == 'usd'){
 				calcCoin(25,"usd")
 				calcCoin(60,"usd")
 				price1.innerHTML = "$" + "0"
-				//price2.innerHTML = "$" +  calcCoin(25, "usd")//25 * 1.08917103 = 27.22927575 = 27
-				//price3.innerHTML = "$" + "60"  //60 * 1.08917103 = 65.3502618 = 65
 				
 
-			}else if(selectObject.value == 'eur'){
-				console.log('EUR€')
+			}else if(selectedCurrency.value == 'eur'){
 				calcCoin(25,"eur")
 				calcCoin(60,"eur")
 				price1.innerHTML = "€" + "0"
-				//price2.innerHTML = "€" + calcCoin(25, "eur") // 25 * 1
-				//price3.innerHTML = "€" + "60"  //60 * 1 
-			}else if(selectObject.value == 'gbp'){
-				console.log('GBP£')
+
+			}else if(selectedCurrency.value == 'gbp'){
 				calcCoin(25,"gbp")
 				calcCoin(60,"gbp")
 				price1.innerHTML = "£" + "0"
-				//price2.innerHTML = "£" + calcCoin(25, "gbp") //25 * 0.86212713 = 21.55317825 = 22
-				//price3.innerHTML = "£" + "60" // 60 * 0.86212713 = 51.7276278 = 52
 			}
 
-		}
+		});
 
 
 		function calcCoin(initialValue,currency){
@@ -347,46 +256,69 @@ function validateInput(event){
 			  	}
 
 
-			  	/*console.log(gbp)
-			  	console.log(usd)
-			  	console.log(eur)*/
-			  	/*if(currency == "usd"){
-			  		finalValue = initialValue * usd
-			  	}else if(currency == "eur"){
-			  		finalValue = initialValue * eur
-			  	}else if(currency == "gbp"){
-			  		finalValue = initialValue * gbp
-			  	}
-			  	let finalValueRound = Math.round(finalValue)
-			  	//console.log(finalValueRound)
-			  	return finalValueRound*/
-
-			 	});
+			});
 
 		}
-
-		const calcCoinApi = async (initialValue,currency) => {
-			const request = await fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
-			const json = await request.json()
-			let dataArray = json.eur
-			let gbp = dataArray.gbp
-	  	let usd = dataArray.usd
-	  	let eur = dataArray.eur
-	  	let finalValue
-	  	/*console.log(gbp)
-	  	console.log(usd)
-	  	console.log(eur)*/
-	  	if(currency == "usd"){
-	  		finalValue = initialValue * usd
-	  	}else if(currency == "eur"){
-	  		finalValue = initialValue * eur
-	  	}else if(currency == "gbp"){
-	  		finalValue = initialValue * gbp
-	  	}
-	  	let finalValueRound = Math.round(finalValue)
-	  	//console.log(finalValueRound)
-	  	return finalValueRound
-		}
-
 
 		
+		/*slider*/
+
+		let slidePosition = 1;
+		SlideShow(slidePosition);
+
+		document.getElementById('backArrow').addEventListener('click', function(){
+			SlideShow(slidePosition += -1);
+		});
+
+		document.getElementById('forwardArrow').addEventListener('click', function(){
+			SlideShow(slidePosition += 1);
+		});
+
+		document.getElementById('dot1').addEventListener('click', function(){
+			SlideShow(slidePosition = 1);
+		});
+
+		document.getElementById('dot2').addEventListener('click', function(){
+			SlideShow(slidePosition = 2);
+		});
+
+		document.getElementById('dot3').addEventListener('click', function(){
+			SlideShow(slidePosition = 3);
+		});
+
+		document.getElementById('dot4').addEventListener('click', function(){
+			SlideShow(slidePosition = 4);
+		});
+
+		document.getElementById('dot5').addEventListener('click', function(){
+			SlideShow(slidePosition = 5);
+		});
+
+		function SlideShow(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("Containers");
+		  let circles = document.getElementsByClassName("dots");
+
+		  if (n > slides.length) {
+		  	slidePosition = 1
+		  }
+
+		  if (n < 1) {
+		  	slidePosition = slides.length
+		  }
+
+		  for (i = 0; i < slides.length; i++) {
+
+		      slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < circles.length; i++) {
+
+		      circles[i].className = circles[i].className.replace(" enable", "");
+		  }
+
+		  slides[slidePosition-1].style.display = "block";
+		  circles[slidePosition-1].className += " enable";
+		} 
+
+		/* slider fin*/
+
