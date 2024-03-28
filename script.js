@@ -217,7 +217,7 @@ let dropdown = false;
 
 
 		function calcCoin(initialValue,currency){
-			fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json')
+			fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/eur.json')
 			  .then((response) => response.json())
 			  .then((json) => {
 			  	let dataArray = json.eur

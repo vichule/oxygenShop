@@ -343,12 +343,14 @@
         border-radius: 20px;
         margin: 2em 0em 2em 0em;
         position: relative;
+        transition: all ease 500ms;
      }
 
      .prices__container:hover{
         height: 340px;
         width: 90%;
         padding: 4em 1em 0em 1em;
+
      }
 
      .prices__container li {
@@ -601,11 +603,19 @@
     }
 
     .footer_title{
+        margin: 1em 0.5em 0em 0em;
+    }
+
+    .footer_title a{
+        text-decoration: none;
         font-family: Raleway;
         font-weight: 300;
         color: #08A6E4;
         margin: 1em 0.5em 0em 0em;
         font-size: 26px;
+        line-height: 0px;
+        letter-spacing: 0px;
+        text-align: left;
     }
 
     .copyright{
@@ -633,6 +643,13 @@
         float: right;
         margin: 3em 2em 2em 0em;
 
+    }
+
+    .footer__container_div2 a{
+        line-height: 0px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin: 0;
     }
 
 
