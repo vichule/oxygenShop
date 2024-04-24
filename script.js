@@ -147,7 +147,7 @@ let dropdown = false;
 
 		    if (nameIsValid && emailIsValid && checkbox.checked) {
 		        	postData();
-					alert('Thank you for your time!')
+					alert('Your data was sent successfully! Thank you for your time!')
 					name.value = '';
 					name.style.borderColor = '#95989A'
 					email.value = '';

@@ -1,335 +1,356 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link href="shopStyle.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="script.js" type="text/javascript" defer></script>
-  </head>
-  <body>
-      
 
-      <nav class="menu">
-        <h2 class="menu_title">OXYGENShop</h2>
-        <button  class="menu_button">
-          <img id="menuClosed" src="images/Menu.png">
-          <img class="hidden" id="menuOpened" src="images/crossMenu.png">
-        </button>
-        
-        <div class="menu_container hidden">
-          <ul>
-            <a href="#whyUs"><li>WHY US</li></a>
-            <a href="#benefits"><li>BENEFITS</li></a>
-            <a href="#prices"><li>PRICES</li></a>
-            <a href="#contact"><li>CONTACT</li></a>
-          </ul>
-        </div>
-        <div class="progress-bar">
-          <div class="progress-bar-content"></div>
-        </div>
-      </nav>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Raleway:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="shopStyle.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="script.js" type="text/javascript" defer></script>
+</head>
 
-      <div id="popUp" class="popUp hidden">
-        <button  id="btnPopup"><img  src="images/crossMenu.png"></button>
-        <div id="popUp_container">
-          <h2 class="h-estandar">Subscribe to our newsletter!</h2>    
-          <form id="formPop" >
-            <div>
-              <p class="p-estandar">EMAIL</p>
-              <input  name="mail" id="emailPop">
-            </div>
-            <button class="subscribe_btn" type="submit">Send</button>
-          </form>
-        </div>
-        <div id="popUp_confirmMessage" class="hidden">
-          <h2 class="h-estandar">Thank you very much for your time!</h2> 
-        </div>
-      </div>
+<body>
 
-    <header>
-      <div>
-        <h2 class="h-estandar">Sell More!</h2>
-        <p class="p-estandar">Open shop on our platform and increase your sales</p>
-        <button class="header_button">Open your shop</button>
-        <img src="images/Background.png" width="100%">
-      </div>
-    </header>
 
-    <button  class="btn_return">
-      <img src="images/circle-up-solid.svg" style="width: 50px">
+  <nav class="menu">
+    <h2 class="menu_title">OXYGENShop</h2>
+    <button class="menu_button">
+      <img id="menuClosed" src="images/Menu.png">
+      <img class="hidden" id="menuOpened" src="images/crossMenu.png">
     </button>
 
-    
-
-    <div class="main">
-      <section id="whyUs">
-        <h2 class="h-estandar">The most popular sales platform in country</h2>
-        <article class="whyUs__container">
-          <img class="whyUs_img1" src="images/Ellipse 1.png" >
-          <img class="whyUs_img11" src="images/Person 2.png" >
-          <h1 class="numbers">100000+</h1>
-          <p class="p-estandar">daily entries</p>
-        </article>
-        <article class="whyUs__container">
-          <img class="whyUs_img1" src="images/Ellipse 2.png" >
-          <img class="whyUs_img12" src="images/Eye 2.png" >
-          <h1 class="numbers">2000000+</h1>
-          <p class="p-estandar">seen products every day</p>
-        </article>
-        <article class="whyUs__container">
-          <img  class="whyUs_img1"src="images/EllipseG.png" >
-          <img class="whyUs_img13" src="images/Catalog 2.png" >
-          <h1 class="numbers">10000+</h1>
-          <p class="p-estandar">added posts daily</p>
-        </article>
-      
-      </section>
-
-      <section id="benefits">
-        <article class="benefits__container" id="red">
-          <div class="benefits__container_div reverse" >
-            <div class="benefits__container_items1">
-              <img id="circleMac" src="images/Frame.png" >
-              <img id="recMac" src="images/Rectange.png" >
-              <img id="mac" src="images/Macbook.png" >
-              <img id="mac2" src="images/Macbook2.png" >
-            </div>
-            <div class="benefits__container_items2">
-              <h2 class="h-estandar">Be always first</h2>
-              <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-            </div>
-            
-            
-          </div>
-          
-        </article>
-        <article class="benefits__container" id="blue">
-          <div class="benefits__container_div">
-            <div class="benefits__container_items1">
-              <img id="iphone1" src="images/iPhone.png" >
-              <img id="iphone2" src="images/iPhone2.png" >
-              <img id="circlePhone1" src="images/Ellipse2B.png" >
-              <img id="circlePhone2" src="images/EllipseBB.png" >
-            </div>
-            <div class="benefits__container_items2">
-              <h2 class="h-estandar">Your shop is where you are!</h2>
-              <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-            </div>
-            
-          </div>
-          
-        </article>
-        <article class="benefits__container" id="green">
-          <div class="green1">
-            <h2 class="h-estandar">Increase recognition your brand!</h2>
-            <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
-          </div>
-          
-          <div class="green2" style="background-color: #55DFB4 ;">
-            <img src="images/Trumpet.png" id="trumpet">
-          </div>
-          
-          
-        </article>
-      
-      </section>
-
-      <section id="prices">
-        <h2 class="h-estandar">Pricing</h2>
-        <div id="selector_container">
-          <label for="coin-select"></label>
-          <select name="coins" id="coin-select" >
-            <option value="eur">EUR</option>
-            <option value="usd">USD</option>
-            <option value="gbp">GBP</option>
-          </select>
-        </div>
-        
-
-        <article class="prices__container border_red">
-          <div class="prices__container_items1">
-            <p class="prices__choice">Basic</p>
-            <p class="prices__price1 p-estandar" id="priceVal1">€0</p>
-          </div>
-          <div class="prices__container_items2">
-            <ul>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">100 MB HDD
-                <li>
-                <img class="checkbox" src="images/Checkbox.png">1 Subdomain
-              </li>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">2 E-mails
-              </li>
-              <li>
-                <img class="checkbox" src="images/Cross.png">Two years license
-              </li>
-              <li>
-                <img class="checkbox" src="images/Cross.png">Full support
-              </li>
-              </li>
-            </ul>
-          </div>
-          <button class="btn_basic">Begin</button>
-        </article>
-        <article class="prices__container border_blue">
-          <div class="prices__container_items1">
-            <p class="prices__choice2">Profesional</p>
-            <p class="prices__price2 p-estandar" id="priceVal2">€25</p>
-            <p class="limited_offer">Limited offer</p>
-          </div>
-          <div class="prices__container_items2">
-            <ul>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">500 MB HDD
-                <li>
-                <img class="checkbox" src="images/Checkbox.png">2 Subdomain
-              </li>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">5 E-mails
-              </li>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">One year license
-              </li>
-              <li>
-                <img class="checkbox" src="images/Cross.png">Full support
-              </li>
-              </li>
-            </ul>
-          </div>
-          <button class="btn_profesional">Begin</button>
-
-        </article>
-        <article class="prices__container border_green">
-          <div class="prices__container_items1">
-            <p class="prices__choice3">Premium</p>
-            <p class="prices__price3 p-estandar" id="priceVal3">€60</p>
-            <p class="limited_offer">Limited offer</p>
-          </div>
-          <div class="prices__container_items2">
-            <ul>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">2 GB HDD
-                <li>
-                <img class="checkbox" src="images/Checkbox.png">5 Subdomain
-              </li>
-              <li>
-                <img class="checkbox"  src="images/Checkbox.png">20 E-mails
-              </li>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">Two years license
-              </li>
-              <li>
-                <img class="checkbox" src="images/Checkbox.png">Full support
-              </li>
-              </li>
-            </ul>
-          </div>
-          <button class="btn_premium">Begin</button>
-
-
-        </article>
-
-          
-      </section>
-
-      <section id="slider">                                                       
-        <div class="slideshow-container">
-
-          <div class="containers">
-            <img id="imgCarousel" src="images/slider1.jpg">
-          </div>
-
-          <div class="containers">
-            <img id="imgCarousel" src="images/slider2.jpg">
-          </div>
-
-          <div class="containers">
-            <img id="imgCarousel" src="images/slider3.jpg">
-          </div>
-
-          <div class="containers">
-            <img id="imgCarousel" src="images/slider4.jpg">
-          </div>
-
-          <div class="containers">
-            <img id="imgCarousel" src="images/slider5.jpg">
-          </div>
-
-          <a class="back" id="backArrow" >&#10094;</a>
-          <a class="forward" id="forwardArrow" >&#10095;</a>
-        </div>
-        <br>
-
-        <div class="dotsLine">
-          <span class="dots" id="dot1" ></span>
-          <span class="dots" id="dot2" ></span>
-          <span class="dots" id="dot3" ></span>
-          <span class="dots" id="dot4" ></span>
-          <span class="dots" id="dot5" ></span>
-        </div> 
-      </section>   
-
-      <section id="contact">
-        <div class="contact__container">
-          <div class="contact__container_title">
-            <h2 class="h-estandar">Any questions?</h2>
-            <p class="p-estandar">Leave your email address or call us!</p>
-          </div>
-          
-          <div class="mail_container">
-            <button class="btn_mail">
-              <img src="images/Mail.png">
-              <p class="p-estandar">info@bestshop.xyz</p>
-            </button>
-          </div>
-          
-          <div class="phone_container">
-            <button class="btn_phone">
-              <img src="images/Phone.png">
-              <p class="p-estandar">123 456 789</p>
-            </button>
-          </div >
-            
-
-        </div>
-
-        <form class="contact__form_container" id="formMain">
-          <div class="contact__form">
-            <p class="p-estandar">NAME</p>
-            <input id="name" type="text" name="name">
-            <p class="p-estandar">EMAIL</p>
-            <input id="email" name="mail">
-          </div>
-          <div class="contact__consent">
-            <input id="checkbox" type="checkbox" name="consent">
-            <p id="checkboxP">
-              I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-            </p>
-          </div>
-          <button class="contact_btn" type="submit">Send</button>
-        </form>
-        
-      </section>
-
-      
-
-      <footer>
-        <div class="footer__container">
-          <div class="footer__container_div1">
-            <p class="footer_title"><a href="index.html"> OXYGENShop</a></p>
-            <p class="copyright">&copy;2022 OXYGEN, All Rights Reserved</p>
-          </div>
-
-          <div class="footer__container_div2">
-            <a href="https://www.facebook.com/" target="blank"><img src="images/Facebook.png" style="margin-right: 1em;"></a>
-            <a href="https://twitter.com/" target="blank"><img src="images/Twitter.png"></a>
-          </div>
-          
-      </footer>
-      
+    <div class="menu_container hidden">
+      <ul>
+        <a href="#whyUs">
+          <li>WHY US</li>
+        </a>
+        <a href="#benefits">
+          <li>BENEFITS</li>
+        </a>
+        <a href="#prices">
+          <li>PRICES</li>
+        </a>
+        <a href="#contact">
+          <li>CONTACT</li>
+        </a>
+      </ul>
     </div>
-  </body>
+    <div class="progress-bar">
+      <div class="progress-bar-content"></div>
+    </div>
+  </nav>
+
+  <div id="popUp" class="popUp hidden">
+    <button id="btnPopup"><img src="images/crossMenu.png"></button>
+    <div id="popUp_container">
+      <h2 class="h-estandar">Subscribe to our newsletter!</h2>
+      <form id="formPop">
+        <div>
+          <p class="p-estandar">EMAIL</p>
+          <input name="mail" id="emailPop">
+        </div>
+        <button class="subscribe_btn" type="submit">Send</button>
+      </form>
+    </div>
+    <div id="popUp_confirmMessage" class="hidden">
+      <h2 class="h-estandar">Success! You're now subscribed.</h2>
+      <h2 class="h-estandar">Thank you very much for your time!</h2>
+    </div>
+  </div>
+
+  <header>
+    <div>
+      <h2 class="h-estandar">Sell More!</h2>
+      <p class="p-estandar">Open shop on our platform and increase your sales</p>
+      <button class="header_button">Open your shop</button>
+      <img src="images/Background.png" width="100%">
+    </div>
+  </header>
+
+  <button class="btn_return">
+    <img src="images/circle-up-solid.svg" style="width: 50px">
+  </button>
+
+
+
+  <div class="main">
+    <section id="whyUs">
+      <h2 class="h-estandar">The most popular sales platform in country</h2>
+      <article class="whyUs__container">
+        <img class="whyUs_img1" src="images/Ellipse 1.png">
+        <img class="whyUs_img11" src="images/Person 2.png">
+        <h1 class="numbers">100000+</h1>
+        <p class="p-estandar">daily entries</p>
+      </article>
+      <article class="whyUs__container">
+        <img class="whyUs_img1" src="images/Ellipse 2.png">
+        <img class="whyUs_img12" src="images/Eye 2.png">
+        <h1 class="numbers">2000000+</h1>
+        <p class="p-estandar">seen products every day</p>
+      </article>
+      <article class="whyUs__container">
+        <img class="whyUs_img1" src="images/EllipseG.png">
+        <img class="whyUs_img13" src="images/Catalog 2.png">
+        <h1 class="numbers">10000+</h1>
+        <p class="p-estandar">added posts daily</p>
+      </article>
+
+    </section>
+
+    <section id="benefits">
+      <article class="benefits__container" id="red">
+        <div class="benefits__container_div reverse">
+          <div class="benefits__container_items1">
+            <img id="circleMac" src="images/Frame.png">
+            <img id="recMac" src="images/Rectange.png">
+            <img id="mac" src="images/Macbook.png">
+            <img id="mac2" src="images/Macbook2.png">
+          </div>
+          <div class="benefits__container_items2">
+            <h2 class="h-estandar">Be always first</h2>
+            <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+          </div>
+
+
+        </div>
+
+      </article>
+      <article class="benefits__container" id="blue">
+        <div class="benefits__container_div">
+          <div class="benefits__container_items1">
+            <img id="iphone1" src="images/iPhone.png">
+            <img id="iphone2" src="images/iPhone2.png">
+            <img id="circlePhone1" src="images/Ellipse2B.png">
+            <img id="circlePhone2" src="images/EllipseBB.png">
+          </div>
+          <div class="benefits__container_items2">
+            <h2 class="h-estandar">Your shop is where you are!</h2>
+            <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+          </div>
+
+        </div>
+
+      </article>
+      <article class="benefits__container" id="green">
+        <div class="green1">
+          <h2 class="h-estandar">Increase recognition your brand!</h2>
+          <p class="p-estandar">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+        </div>
+
+        <div class="green2" style="background-color: #55DFB4 ;">
+          <img src="images/Trumpet.png" id="trumpet">
+        </div>
+
+
+      </article>
+
+    </section>
+
+    <section id="prices">
+      <h2 class="h-estandar">Pricing</h2>
+      <div id="selector_container">
+        <label for="coin-select"></label>
+        <select name="coins" id="coin-select">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="gbp">GBP</option>
+        </select>
+      </div>
+
+
+      <article class="prices__container border_red">
+        <div class="prices__container_items1">
+          <p class="prices__choice">Basic</p>
+          <p class="prices__price1 p-estandar" id="priceVal1">€0</p>
+        </div>
+        <div class="prices__container_items2">
+          <ul>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">100 MB HDD
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">1 Subdomain
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">2 E-mails
+            </li>
+            <li>
+              <img class="checkbox" src="images/Cross.png">Two years license
+            </li>
+            <li>
+              <img class="checkbox" src="images/Cross.png">Full support
+            </li>
+            </li>
+          </ul>
+        </div>
+        <button class="btn_basic">Begin</button>
+      </article>
+      <article class="prices__container border_blue">
+        <div class="prices__container_items1">
+          <p class="prices__choice2">Profesional</p>
+          <p class="prices__price2 p-estandar" id="priceVal2">€25</p>
+          <p class="limited_offer">Limited offer</p>
+        </div>
+        <div class="prices__container_items2">
+          <ul>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">500 MB HDD
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">2 Subdomain
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">5 E-mails
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">One year license
+            </li>
+            <li>
+              <img class="checkbox" src="images/Cross.png">Full support
+            </li>
+            </li>
+          </ul>
+        </div>
+        <button class="btn_profesional">Begin</button>
+
+      </article>
+      <article class="prices__container border_green">
+        <div class="prices__container_items1">
+          <p class="prices__choice3">Premium</p>
+          <p class="prices__price3 p-estandar" id="priceVal3">€60</p>
+          <p class="limited_offer">Limited offer</p>
+        </div>
+        <div class="prices__container_items2">
+          <ul>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">2 GB HDD
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">5 Subdomain
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">20 E-mails
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">Two years license
+            </li>
+            <li>
+              <img class="checkbox" src="images/Checkbox.png">Full support
+            </li>
+            </li>
+          </ul>
+        </div>
+        <button class="btn_premium">Begin</button>
+
+
+      </article>
+      
+
+    </section>
+
+    <section id="slider">
+      <div class="slideshow-container">
+
+        <div class="containers">
+          <img id="imgCarousel" src="images/slider1.jpg">
+        </div>
+
+        <div class="containers">
+          <img id="imgCarousel" src="images/slider2.jpg">
+        </div>
+
+        <div class="containers">
+          <img id="imgCarousel" src="images/slider3.jpg">
+        </div>
+
+        <div class="containers">
+          <img id="imgCarousel" src="images/slider4.jpg">
+        </div>
+
+        <div class="containers">
+          <img id="imgCarousel" src="images/slider5.jpg">
+        </div>
+
+        <a class="back" id="backArrow">&#10094;</a>
+        <a class="forward" id="forwardArrow">&#10095;</a>
+      </div>
+      <br>
+
+      <div class="dotsLine">
+        <span class="dots" id="dot1"></span>
+        <span class="dots" id="dot2"></span>
+        <span class="dots" id="dot3"></span>
+        <span class="dots" id="dot4"></span>
+        <span class="dots" id="dot5"></span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact__container">
+        <div class="contact__container_title">
+          <h2 class="h-estandar">Any questions?</h2>
+          <p class="p-estandar">Leave your email address or call us!</p>
+        </div>
+
+        <div class="mail_container">
+          <button class="btn_mail">
+            <img src="images/Mail.png">
+            <p class="p-estandar">info@bestshop.xyz</p>
+          </button>
+        </div>
+
+        <div class="phone_container">
+          <button class="btn_phone">
+            <img src="images/Phone.png">
+            <p class="p-estandar">123 456 789</p>
+          </button>
+        </div>
+
+
+      </div>
+
+      <form class="contact__form_container" id="formMain">
+        <div class="contact__form">
+          <p class="p-estandar">NAME</p>
+          <input id="name" type="text" name="name">
+          <p class="p-estandar">EMAIL</p>
+          <input id="email" name="mail">
+        </div>
+        <div class="contact__consent">
+          <input id="checkbox" type="checkbox" name="consent">
+          <p id="checkboxP">
+            I hereby give consent for my personal data included in my application to be processed for the purposes of
+            the recruitment process under the European Parliament’s and Council of the European Union Regulation on the
+            Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the
+            free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+          </p>
+        </div>
+        <button class="contact_btn" type="submit">Send</button>
+      </form>
+
+    </section>
+
+
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__container_div1">
+          <p class="footer_title"><a href="index.html"> OXYGENShop</a></p>
+          <p class="copyright">&copy;2022 OXYGEN, All Rights Reserved</p>
+        </div>
+
+        <div class="footer__container_div2">
+          <a href="https://www.facebook.com/" target="blank"><img src="images/Facebook.png"
+              style="margin-right: 1em;"></a>
+          <a href="https://twitter.com/" target="blank"><img src="images/Twitter.png"></a>
+        </div>
+
+    </footer>
+
+  </div>
+</body>
+
 </html>

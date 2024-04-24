@@ -5,32 +5,33 @@
         text-align: center;
     }
 
-    html{
+    html {
         scroll-behavior: smooth;
     }
+
     body {
         min-width: 320px;
     }
 
-    header{
+    header {
         margin-top: 5em;
     }
 
 
-    ul{
+    ul {
         list-style-type: none;
     }
 
-    li{
+    li {
         text-align: start;
         margin: 1em 0em 0em 1em;
     }
 
-    button{
+    button {
         cursor: pointer;
     }
 
-    .height12{
+    .height12 {
         height: 12em;
     }
 
@@ -46,16 +47,22 @@
         border: 3px solid black;
     }
 
-    #btnPopup{
+    #btnPopup {
         width: 2em;
         height: 2em;
         border-radius: 20px;
         display: block;
         position: relative;
         bottom: 2.5em;
+        transition: all ease 500ms;
     }
 
-    .subscribe_btn{
+    #btnPopup:hover{
+        box-shadow: 0px 0px 20px #07ACE6;
+        transition: all ease 500ms;
+    }
+
+    .subscribe_btn {
         background: #08A6E4;
         color: white;
         width: 15em;
@@ -66,54 +73,61 @@
         margin: 2em 0em 1em 0em;
         font-family: 'Open Sans';
         font-weight: 700;
+        transition: all ease 500ms;
     }
 
-    .h-estandar{
+    .subscribe_btn:hover{
+        box-shadow: 0px 0px 20px #07ACE6;
+        width: 16em;
+        transition: all ease 500ms;
+    }
+
+    .h-estandar {
         font-family: Raleway;
         font-weight: 400;
     }
 
-    .p-estandar{
+    .p-estandar {
         font-family: Open Sans;
         font-weight: 400;
         font-size: 13px;
         line-height: 23px;
     }
 
-    .border_red{
+    .border_red {
         border: 1px solid #FB3B64;
 
     }
 
-    .border_red:hover{
+    .border_red:hover {
         box-shadow: 0px 0px 20px #FB3B64;
     }
 
-    .border_blue{
+    .border_blue {
         border: 1px solid #07ACE6;
     }
 
-    .border_blue:hover{
+    .border_blue:hover {
         box-shadow: 0px 0px 20px #07ACE6;
     }
 
-    .border_green{
+    .border_green {
         border: 1px solid #55DFB4;
     }
 
-    .border_green:hover{
+    .border_green:hover {
         box-shadow: 0px 0px 20px #55DFB4;
     }
 
-    .hidden{
+    .hidden {
         display: none;
     }
 
-    #benefits{
+    #benefits {
         background-color: #F7F7F7;
     }
 
-    .numbers{
+    .numbers {
         font-family: Raleway;
         font-weight: 800;
         line-height: 24px;
@@ -125,7 +139,7 @@
 
 
 
-    .menu{
+    .menu {
         box-shadow: 0px 5px 5px lightgrey;
         position: sticky;
         top: 0;
@@ -148,18 +162,18 @@
         letter-spacing: 3.28px;
     }
 
-    .menu_container li:hover{
+    .menu_container li:hover {
         color: black;
-        
+
     }
 
-    .menu_container{
+    .menu_container {
         position: absolute;
         top: 4em;
         left: 1em;
     }
 
-    .menu_button{
+    .menu_button {
         border: none;
         background-color: white;
         margin-left: 8em;
@@ -167,7 +181,7 @@
 
 
 
-    .menu_title{
+    .menu_title {
         font-family: Raleway;
         font-weight: 400;
         color: #08A6E4;
@@ -175,8 +189,8 @@
         display: inline-block;
     }
 
-    .progress-bar{
-       
+    .progress-bar {
+
         width: 100%;
         height: 3px;
         position: absolute;
@@ -184,7 +198,7 @@
         right: 0%;
     }
 
-    .progress-bar-content{
+    .progress-bar-content {
         position: relative;
         background-color: #08A6E4;
         width: 0%;
@@ -192,7 +206,7 @@
         height: 3px;
     }
 
-    .header_button{
+    .header_button {
         background: #08A6E4;
         color: white;
         width: 310px;
@@ -201,18 +215,25 @@
         border: none;
         box-shadow: 5px 10px 14px 0px #07ACE64A;
         margin-bottom: 5em;
+        transition: all ease 500ms;
+        
+    }
 
+    .header_button:hover {
+        box-shadow: 0px 0px 20px #07ACE6;
+        width: 320px;
+        transition: all ease 500ms;
     }
 
 
 
-    header h2{
+    header h2 {
         margin-bottom: 1em;
         font-size: 35px;
         font-weight: 400;
     }
 
-    header p{
+    header p {
         margin-bottom: 3em;
         font-size: 16px;
         font-weight: 400;
@@ -220,7 +241,7 @@
         width: 65%;
     }
 
-    .btn_return{
+    .btn_return {
         position: fixed;
         bottom: 2em;
         right: 2em;
@@ -232,42 +253,43 @@
         border-radius: 28px;
     }
 
-    #whyUs{
+    #whyUs {
         margin-left: 0em;
         margin-right: 0em;
     }
 
-    .whyUs__container{
+    .whyUs__container {
         margin-top: 2em;
         margin-bottom: 2em;
     }
 
-    .whyUs__container p{
+    .whyUs__container p {
         color: #A5A5A5;
         width: 25%;
         display: inline-block;
     }
 
-    .whyUs_img1{
+    .whyUs_img1 {
         position: absolute;
     }
 
-    .whyUs_img11{
+    .whyUs_img11 {
         position: relative;
-        margin: 0em 0em 1em 2em;}
+        margin: 0em 0em 1em 2em;
+    }
 
-    .whyUs_img12{
+    .whyUs_img12 {
         position: relative;
         margin: 1em 0em 1em 1em;
     }
 
-    .whyUs_img13{
+    .whyUs_img13 {
         position: relative;
         margin: 0em 0em 0em 2em;
     }
 
 
-    .benefits__container{
+    .benefits__container {
         width: 80%;
         height: 420px;
         display: inline-block;
@@ -277,35 +299,35 @@
         padding: 2em 0em 2em 0em;
     }
 
-    #recMac{
+    #recMac {
         display: none;
     }
 
-    #circleMac{
+    #circleMac {
         z-index: 1;
         position: absolute;
         margin: 0em 0em 0em 6em;
     }
 
-    #mac{
+    #mac {
         z-index: 2;
         position: relative;
         margin: 2em 0em 0em 0em;
     }
 
-    #mac2{
+    #mac2 {
         display: none;
     }
 
-    #iphone1{
+    #iphone1 {
         position: absolute;
     }
 
-    #iphone2{
+    #iphone2 {
         display: none;
     }
 
-    #circlePhone2{
+    #circlePhone2 {
         display: none;
     }
 
@@ -319,21 +341,22 @@
         margin: 1em 2em 1em 2em;
     }
 
-    li p{
+    li p {
         display: inline-block;
     }
 
-    .checkbox{
+    .checkbox {
         margin-right: 0.6em;
         height: fit-content;
         margin-top: 4px;
     }
 
-    #prices{
+    #prices {
         margin-top: 3em;
+        min-height: 720px;
     }
 
-     .prices__container{
+    .prices__container {
         display: inline-flex;
         flex-wrap: wrap;
         align-items: center;
@@ -344,38 +367,32 @@
         margin: 2em 0em 2em 0em;
         position: relative;
         transition: all ease 500ms;
-     }
+    }
 
-     .prices__container:hover{
-        height: 340px;
-        width: 90%;
-        padding: 4em 1em 0em 1em;
 
-     }
-
-     .prices__container li {
+    .prices__container li {
         font-family: Open Sans;
         font-size: 14px;
         font-weight: 400;
         line-height: 19px;
         letter-spacing: 0em;
         margin: 0em 0em 2em 1em;
-     }
+    }
 
-        
 
-    .prices__container_items2{
+
+    .prices__container_items2 {
         display: inline-block;
         margin-left: 0em;
     }
 
-    .prices__container_items1{
+    .prices__container_items1 {
         display: inline-block;
         margin-right: 0em;
         margin-bottom: 3em;
     }
 
-    .prices__choice{
+    .prices__choice {
         font-family: 'Raleway';
         font-size: 20px;
         line-height: 24px;
@@ -383,7 +400,7 @@
         margin: 0em 1em 1em 2.5em;
     }
 
-    .prices__choice2{
+    .prices__choice2 {
         font-family: 'Raleway';
         font-size: 20px;
         line-height: 24px;
@@ -391,7 +408,7 @@
         margin: 0em 0em 1em 1.5em;
     }
 
-    .prices__choice3{
+    .prices__choice3 {
         font-family: 'Raleway';
         font-size: 20px;
         line-height: 24px;
@@ -399,7 +416,7 @@
         margin: 0em 1em 1em 1.5em;
     }
 
-    .prices__price1{
+    .prices__price1 {
 
         font-size: 46px;
         color: #FB3B64;
@@ -407,7 +424,7 @@
         margin-left: 0.5em;
     }
 
-    .prices__price2{
+    .prices__price2 {
 
         font-size: 46px;
         color: #07ACE6;
@@ -416,7 +433,7 @@
         margin-bottom: 0.5em;
     }
 
-    .prices__price3{
+    .prices__price3 {
 
         font-size: 46px;
         color: #55DFB4;
@@ -424,7 +441,7 @@
         margin-bottom: 0.5em;
     }
 
-    .limited_offer{
+    .limited_offer {
         font-family: 'Raleway';
         font-weight: 700;
         font-size: 12px;
@@ -432,7 +449,7 @@
 
     }
 
-    .btn_basic{
+    .btn_basic {
         width: 170px;
         height: 50px;
         background-color: #EB476E;
@@ -447,7 +464,7 @@
     }
 
 
-    .btn_profesional{
+    .btn_profesional {
         width: 170px;
         height: 50px;
         background-color: #07ACE6;
@@ -463,7 +480,7 @@
 
 
 
-    .btn_premium{
+    .btn_premium {
         width: 170px;
         height: 50px;
         background-color: #55DFB4;
@@ -478,77 +495,77 @@
     }
 
 
-    #contact{
+    #contact {
         margin-top: 5em;
     }
 
-    .btn_mail{
+    .btn_mail {
         background: none;
         border: none;
     }
 
-    .btn_phone{
+    .btn_phone {
         background: none;
         border: none;
     }
 
 
-    .contact__container_title{
+    .contact__container_title {
         padding: 1em 1em 0em 2em;
     }
 
-    .contact__container_title p{
+    .contact__container_title p {
         font-size: 16px;
         line-height: 22px;
         text-align: left;
     }
 
-    .contact__container_title h2{
+    .contact__container_title h2 {
         font-size: 40px;
         text-align: left;
     }
 
 
 
-    .mail_container{
+    .mail_container {
         text-align: left;
         margin: 1em 0em 0.5em 2em;
     }
 
-    .mail_container p{
+    .mail_container p {
         display: inline-block;
         margin-left: 2.5em;
         font-weight: 600;
         color: #A5A5A5;
     }
 
-    .mail_container img{
+    .mail_container img {
         position: absolute;
     }
 
 
-    .phone_container{
+    .phone_container {
         text-align: left;
         margin: 1em 0em 0.5em 2em;
     }
 
-    .phone_container p{
+    .phone_container p {
         display: inline-block;
         margin-left: 2.5em;
         font-weight: 600;
         color: #A5A5A5;
     }
 
-    .phone_container img{
+    .phone_container img {
         position: absolute;
     }
 
-    .contact__form{
+    .contact__form {
         text-align: left;
         margin: 2em 0em 2em 2em;
     }
 
-    .contact__form p{
+    .contact__form p {
         display: inline-block;
         font-weight: 600;
         font-size: 11px;
@@ -556,7 +573,7 @@
         color: #08A6E4;
     }
 
-    .contact__form input{
+    .contact__form input {
         display: block;
         width: 90%;
         border: none;
@@ -566,19 +583,19 @@
         margin-top: 1em;
     }
 
-    .contact__consent{
+    .contact__consent {
         text-align: left;
         margin-left: 2em;
-        display: flex; 
+        display: flex;
     }
 
-    #checkbox{
+    #checkbox {
         width: 24px;
         height: 24px;
     }
 
 
-    #checkboxP{
+    #checkboxP {
         font-size: 12px;
         line-height: 16.34px;
         color: #707070;
@@ -589,10 +606,10 @@
         font-weight: 400;
     }
 
-    .contact_btn{
+    .contact_btn {
         background: #08A6E4;
         color: white;
-        width: 226px;
+        width: 17em;
         height: 57px;
         border-radius: 40px;
         border: none;
@@ -600,13 +617,20 @@
         margin: 2em 0em 1em 2em;
         font-family: 'Open Sans';
         font-weight: 700;
+        transition: all ease 500ms;
     }
 
-    .footer_title{
+    .contact_btn:hover{
+        box-shadow: 0px 0px 20px #07ACE6;
+        transition: all ease 500ms;
+        width: 18em;
+    }
+
+    .footer_title {
         margin: 1em 0.5em 0em 0em;
     }
 
-    .footer_title a{
+    .footer_title a {
         text-decoration: none;
         font-family: Raleway;
         font-weight: 300;
@@ -618,7 +642,7 @@
         text-align: left;
     }
 
-    .copyright{
+    .copyright {
         font-size: 11px;
         line-height: 15px;
         opacity: 0.4;
@@ -627,25 +651,25 @@
         font-weight: 400;
     }
 
-    .footer__container{
+    .footer__container {
         margin: 0em 0em 2em 0em;
         box-shadow: 0px 5px 4px 6px lightgrey;
     }
 
-    .footer__container_div1{
-        display: inline-block;
+    .footer__container_div1 {
+        display: block;
         float: left;
         margin: 1em 0em 1em 1em;
     }
 
-    .footer__container_div2{
-        display: inline-block;
+    .footer__container_div2 {
+        display: block;
         float: right;
         margin: 3em 2em 2em 0em;
 
     }
 
-    .footer__container_div2 a{
+    .footer__container_div2 a {
         line-height: 0px;
         letter-spacing: 0px;
         text-align: left;
@@ -655,7 +679,7 @@
 
     /* slider */
 
-    #slider{
+    #slider {
         display: none;
     }
 
@@ -676,7 +700,8 @@
         height: 60em;
     }
 
-    .back, .forward {
+    .back,
+    .forward {
         cursor: pointer;
         position: absolute;
         width: auto;
@@ -693,15 +718,16 @@
     }
 
     .forward {
-      right: -4em;
+        right: -4em;
     }
 
-    .back{
+    .back {
         left: 1em;
     }
 
-    .back:hover, .forward:hover {
-      background-color: white;
+    .back:hover,
+    .forward:hover {
+        background-color: white;
     }
 
 
@@ -712,18 +738,19 @@
     }
 
     .dots {
-      cursor: pointer;
-      height: 10px;
-      width: 10px;
-      margin: 0.2em;
-      background-color: #717161; 
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.5s ease;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0.2em;
+        background-color: #717161;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
     }
 
-    .enable, .dots:hover {
-      background-color: white;
+    .enable,
+    .dots:hover {
+        background-color: white;
     }
 
 
@@ -736,7 +763,7 @@
 
     /*/slider*/
 
-    #coin-select{
+    #coin-select {
         background-color: #08A6E4;
         color: white;
         height: 2em;
@@ -745,426 +772,422 @@
         margin-top: 1em;
     }
 
-/* breakpoint para evitar errores con estas dos clases */
-@media only screen and (min-width: 50px) {
-
-    .h-estandar{
-        font-family: Raleway;
-        font-weight: 400;
-    }
-
-    .p-estandar{
-        font-family: Open Sans;
-        font-weight: 400;
-    }
-}
-
-
-/*A partir de aquí, estilo para pantallas grandes desktop --------------------------------------------------------------------------------------*/
-
-
-
-@media only screen and (min-width: 1250px) {
-
-    #slider{
-        display: block;
-    }
-
-    .menu{
-        justify-content: space-between;
-        display: flex;
-        padding: 2em 5em 0em 10em;
-    }
-
-    .menu_button{
-        display: none;
-    }
-
-    .menu_container{
-        display: inline-block;
-        position: static;
-    }
-
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .menu_container li{
-        height: 5em;
-    }
-
-    a{
-        text-decoration: none;
-        color: #A5A5A5;
-        font-family: 'Open Sans';
-        font-weight: 700;
-        font-size: 11px;
-        line-height: 15px;
-        letter-spacing: 3.28px;
-        text-align: center;
-        margin-right: 6em;
-    }
-
-    .menu_container li:hover{
-        border-bottom: 5px solid #08A6E4;
-        color: black;
-        
-    }
-
-    li{
-        display: inline-block;
-    }
-
-
-    header p{
-        width: 100%;
-    }
-
-    .popUp{
-
-        top: 50%;
-        height: 15em;
-        width: 25em;
-        left: 40%;
-    }
-
-    #whyUs{
-        display: flex;
-        justify-content: center;
-    }
-
-    #whyUs h2{
-        font-size: 36px;
-        position: absolute;
-    }
-
-    .whyUs__container{
-        margin: 10em 5em 10em 5em;
-    }
-
-    .whyUs__container p {
-        width: 75%;
-    }
-
-    .whyUs_img13{
-        margin: 0.5em 0em 1em 2em;
-    }
-
-    #benefits{
-        display: inline-block;
-        padding: 5em 0em 5em 0em;
-    }
-
-    .reverse{
-        flex-flow: row-reverse;
-    }
-
-    .benefits__container{
-        width: 70%;
-        margin: 1em 0em 1em 0em
-    }
-
-    .benefits__container_div{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .benefits__container_items1{
-        width: 40%;
-        display: block;
-        text-align: left;
-    }
-
-    .benefits__container_items2{
-        width: 33%;
-        display: block;
-    }
-
-
-    #blue{
-        width: 70%;
-        margin: 1em 0em 1em 0em;
-        padding: 4em 0em 1em 5em;
-    }
-
-
-    #green {
-        width: 70%;
-        display: inline-flex;
-        background: none;
-        padding: 0em 0em 1em 0em;
-    }
-
-    .green1{
-        background-color: white;
-        margin-right: 4em;
-    }
-
-    .green2{
-        background-color: #55DFB4;
-        width: 60%;
-        height: 100%;
-    }
-
-    #trumpet{
-        position: absolute;
-        width: 20%;
-        right: 20em;
-        margin-top: 7em;
-    }
-
-    #circleMac{
-        display: none;
-    }
-
-    #recMac{
-        display: inline-block;
-        z-index: 1;
-        position: absolute;
-        margin: 3em 0em 0em 12em;
-    }
-
-    #mac2{
-        display: inline-block;
-        z-index: 2;
-        position: absolute;
-        margin: 7em 0em 0em 0em;
-    }
-
-    #mac{
-        display: none;
-    }
-
-    #iphone1{
-        display: none;
-    }
-
-    #iphone2{
-        position: absolute;
-        display: block;
-        z-index: 2;
-    }
-
-    #circlePhone2{
-        display: block;
-        position: absolute;
-    }
-
-    #circlePhone1{
-        display: none;
-    }
-
-
-    .benefits__container h2{
-        margin: 5em 1em 0em 2.5em;
-    }
-
-    .benefits__container p{
-        margin: 1em 0em 0em 5em;
-        width: 75%;
-        padding-bottom: 4em;
-    }
-
-    #red p{
-        border-bottom: 4px solid #EB476E;
-    }
+    /* breakpoint para evitar errores con estas dos clases */
+    @media only screen and (min-width: 50px) {
 
-    #blue p{
-        border-bottom: 4px solid #07ACE6;
-        margin: 1em 1em 1em 0em;
-        width: 80%;
-    }
-
-    #blue h2{
-        margin: 1em 1em 1em 0em;
-        width: 40%;
-    }
+        .h-estandar {
+            font-family: Raleway;
+            font-weight: 400;
+        }
 
-    #green p{
-        border-bottom: 4px solid #55DFB4;
-        width: 52%;
+        .p-estandar {
+            font-family: Open Sans;
+            font-weight: 400;
+        }
     }
 
-    #prices{
-        margin-top: 5em;
 
-    }
+    /*A partir de aquí, estilo para pantallas grandes desktop --------------------------------------------------------------------------------------*/
 
 
-    .prices__container{
-        width: 24%;
-        height: 500px;
-        margin: 3em 3em 0em 4em;
-        padding-bottom: 3em;
-    }
 
-    .prices__container:hover{
-        height: 540px;
-        width: 25%;
-        padding-bottom: 3em;
-    }
+    @media only screen and (min-width: 1250px) {
 
-    .prices__container li {
-        margin: 0em 0em 2em 0em;
-        display: flex;
-        justify-content: center;
-    }
+        #slider {
+            display: block;
+        }
 
-    .prices__container_items1{
-        width: 100%;
-    }
+        .menu {
+            justify-content: space-between;
+            display: flex;
+            padding: 2em 5em 0em 10em;
+        }
+
+        .menu_button {
+            display: none;
+        }
+
+        .menu_container {
+            display: inline-block;
+            position: static;
+        }
 
-    .prices__container_items2{
-        width: 100%;
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    }
+        .menu_container li {
+            height: 5em;
+        }
 
-    .prices__price1{
-        margin: 0em 0em 0.5em 0em;
-    }
+        a {
+            text-decoration: none;
+            color: #A5A5A5;
+            font-family: 'Open Sans';
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 15px;
+            letter-spacing: 3.28px;
+            text-align: center;
+            margin-right: 6em;
+        }
+
+        .menu_container li:hover {
+            border-bottom: 5px solid #08A6E4;
+            color: black;
+
+        }
+
+        li {
+            display: inline-block;
+        }
+
+
+        header p {
+            width: 100%;
+        }
+
+        .popUp {
+
+            top: 50%;
+            height: 15em;
+            width: 25em;
+            left: 40%;
+        }
+
+        #whyUs {
+            display: flex;
+            justify-content: center;
+        }
+
+        #whyUs h2 {
+            font-size: 36px;
+            position: absolute;
+        }
+
+        .whyUs__container {
+            margin: 10em 5em 10em 5em;
+        }
+
+        .whyUs__container p {
+            width: 75%;
+        }
+
+        .whyUs_img13 {
+            margin: 0.5em 0em 1em 2em;
+        }
+
+        #benefits {
+            display: inline-block;
+            padding: 5em 0em 5em 0em;
+        }
+
+        .reverse {
+            flex-flow: row-reverse;
+        }
+
+        .benefits__container {
+            width: 70%;
+            margin: 1em 0em 1em 0em
+        }
+
+        .benefits__container_div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .benefits__container_items1 {
+            width: 40%;
+            display: block;
+            text-align: left;
+        }
+
+        .benefits__container_items2 {
+            width: 33%;
+            display: block;
+        }
+
+
+        #blue {
+            width: 70%;
+            margin: 1em 0em 1em 0em;
+            padding: 4em 0em 1em 5em;
+        }
+
+
+        #green {
+            width: 70%;
+            display: inline-flex;
+            background: none;
+            padding: 0em 0em 1em 0em;
+        }
+
+        .green1 {
+            background-color: white;
+            margin-right: 4em;
+        }
+
+        .green2 {
+            background-color: #55DFB4;
+            width: 60%;
+            height: 100%;
+        }
+
+        #trumpet {
+            position: absolute;
+            width: 20%;
+            right: 20em;
+            margin-top: 7em;
+        }
+
+        #circleMac {
+            display: none;
+        }
+
+        #recMac {
+            display: inline-block;
+            z-index: 1;
+            position: absolute;
+            margin: 3em 0em 0em 12em;
+        }
+
+        #mac2 {
+            display: inline-block;
+            z-index: 2;
+            position: absolute;
+            margin: 7em 0em 0em 0em;
+        }
+
+        #mac {
+            display: none;
+        }
+
+        #iphone1 {
+            display: none;
+        }
+
+        #iphone2 {
+            position: absolute;
+            display: block;
+            z-index: 2;
+        }
+
+        #circlePhone2 {
+            display: block;
+            position: absolute;
+        }
+
+        #circlePhone1 {
+            display: none;
+        }
+
+
+        .benefits__container h2 {
+            margin: 5em 1em 0em 2.5em;
+        }
+
+        .benefits__container p {
+            margin: 1em 0em 0em 5em;
+            width: 75%;
+            padding-bottom: 4em;
+        }
+
+        #red p {
+            border-bottom: 4px solid #EB476E;
+        }
+
+        #blue p {
+            border-bottom: 4px solid #07ACE6;
+            margin: 1em 1em 1em 0em;
+            width: 80%;
+        }
+
+        #blue h2 {
+            margin: 1em 1em 1em 0em;
+            width: 40%;
+        }
+
+        #green p {
+            border-bottom: 4px solid #55DFB4;
+            width: 52%;
+        }
+
+        #prices {
+            margin-top: 5em;
+
+        }
+
+
+        .prices__container {
+            width: 24%;
+            height: 500px;
+            margin: 3em 3em 0em 4em;
+            padding-bottom: 3em;
+        }
+
+
+        .prices__container li {
+            margin: 0em 0em 2em 0em;
+            display: flex;
+            justify-content: center;
+        }
+
+        .prices__container_items1 {
+            width: 100%;
+        }
+
+        .prices__container_items2 {
+            width: 100%;
+
+        }
+
+        .prices__price1 {
+            margin: 0em 0em 0.5em 0em;
+        }
+
+        .prices__price2 {
+            margin: 0em 0em 0.5em 0em;
+        }
+
+        .prices__price3 {
+            margin: 0em 0em 0.5em 0em;
+        }
+
+        .prices__choice {
+            margin: 0em 0em 2.5em 0em;
+        }
+
+        .prices__choice3 {
+            margin: 0em 0em 2.5em 0em;
+        }
+
+        .prices__choice2 {
+            margin: 0em 0em 2.5em 0em;
+        }
+
+        .btn_basic {
+            left: 30%;
+            top: 95%;
+        }
 
-    .prices__price2{
-        margin: 0em 0em 0.5em 0em;
-    }
+        .btn_profesional {
+            left: 30%;
+            top: 95%;
+        }
 
-    .prices__price3{
-        margin: 0em 0em 0.5em 0em;
-    }
+        .btn_premium {
+            left: 30%;
+            top: 95%;
+        }
 
-    .prices__choice {
-        margin: 0em 0em 2.5em 0em;
-    }
+        .limited_offer {
+            margin: 0em;
+        }
 
-    .prices__choice3{
-        margin: 0em 0em 2.5em 0em;
-    }
+        #contact {
+            margin-top: 15em;
+            display: flex;
+            justify-content: center;
+            padding-left: 12em;
+        }
 
-    .prices__choice2{
-        margin: 0em 0em 2.5em 0em;
-    }
+        .contact__container_title h2 {
 
-    .btn_basic{
-        left: 30%;
-        top: 95%;
-    }
+            margin-bottom: 0.5em;
+        }
 
-    .btn_profesional{
-        left: 30%;
-        top: 95%;
-    }
+        .contact__container_title p {
 
-    .btn_premium{
-        left: 30%;
-        top: 95%;
-    }
+            margin-bottom: 1em;
+        }
 
-    .limited_offer{
-        margin: 0em;
-    }
+        .mail_container {
+            display: inline-block;
+        }
 
-    #contact{
-        margin-top: 15em;
-        display: flex;
-        justify-content: center;
-        padding-left: 12em;
-    }
+        .phone_container {
+            display: inline-block;
+            margin-right: 6em;
+        }
 
-    .contact__container_title h2 {
-        
-        margin-bottom: 0.5em;
-    }
+        .contact__form_container {
+            display: inline-block;
+            width: 50%;
+        }
 
-    .contact__container_title p {
-        
-        margin-bottom: 1em;
-    }
+        .contact__form {
+            width: 80%;
+        }
 
-    .mail_container {
-        display: inline-block;
-    }
-    .phone_container {
-        display: inline-block;
-        margin-right: 6em;
-    }
+        .contact_btn {
+            margin: 2em 0em 3em 8em;
+        }
 
-    .contact__form_container{
-        display: inline-block;
-        width: 50%;
-    }
+        .footer__container {
+            box-shadow: 0px 0px 7px black;
+            border-top: 1px solid lightgrey;
+        }
 
-    .contact__form {
-        width: 80%;
-    }
+        .footer__container_div1 {
+            margin: 1em 0em 1em 8em;
+        }
 
-    .contact_btn {
-        margin: 2em 0em 3em 8em;
-    }
+        .footer__container_div2 {
+            margin: 3em 8em 2em 0em;
 
-    .footer__container {
-        box-shadow: 0px 0px 7px black;
-        border-top: 1px solid lightgrey;
-    }
+        }
 
-    .footer__container_div1{
-        margin: 1em 0em 1em 8em;
     }
 
-    .footer__container_div2{
-        margin: 3em 8em 2em 0em;
 
-    }
-
-}
+    @media only screen and (min-width: 700px) and (max-width: 1200px) {
 
+        header p {
+            display: block;
+            width: 100%;
 
-@media only screen and (min-width: 700px) and (max-width: 1200px){
+        }
 
-    header p {
-        display: block;
-        width: 100%;
-        
-    }
+        .btn_basic {
+            left: 42%;
+        }
 
-    .btn_basic{
-        left: 42%;
-    }
+        .btn_premium {
+            left: 42%;
+        }
 
-    .btn_premium{
-        left: 42%;
-    }
+        .btn_profesional {
 
-    .btn_profesional{
+            left: 42%;
+        }
 
-        left: 42%;
-    }
+        .prices__choice {
+            margin-left: 13.5em;
+        }
 
-    .prices__choice{
-        margin-left: 13.5em;
-    }
+        .prices__choice2 {
+            margin-left: 13.5em;
+        }
 
-    .prices__choice2{
-        margin-left: 13.5em;
-    }
+        .prices__choice3 {
+            margin-left: 13.5em;
+        }
 
-    .prices__choice3{
-        margin-left: 13.5em;
-    }
+        .prices__price1 {
+            margin-left: 5.5em;
+        }
 
-    .prices__price1{
-        margin-left: 5.5em;
-    }
+        .prices__price2 {
+            margin-left: 5.5em;
+        }
 
-    .prices__price2{
-        margin-left: 5.5em;
-    }
+        .prices__price3 {
+            margin-left: 5.5em;
+        }
 
-    .prices__price3{
-        margin-left: 5.5em;
-    }
+        .limited_offer {
+            margin-left: 20em;
+        }
 
-    .limited_offer{
-        margin-left: 20em;
     }
-
-}
