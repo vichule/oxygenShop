@@ -57,7 +57,7 @@
         transition: all ease 500ms;
     }
 
-    #btnPopup:hover{
+    #btnPopup:hover {
         box-shadow: 0px 0px 20px #07ACE6;
         transition: all ease 500ms;
     }
@@ -76,7 +76,7 @@
         transition: all ease 500ms;
     }
 
-    .subscribe_btn:hover{
+    .subscribe_btn:hover {
         box-shadow: 0px 0px 20px #07ACE6;
         width: 16em;
         transition: all ease 500ms;
@@ -216,7 +216,7 @@
         box-shadow: 5px 10px 14px 0px #07ACE64A;
         margin-bottom: 5em;
         transition: all ease 500ms;
-        
+
     }
 
     .header_button:hover {
@@ -620,7 +620,7 @@
         transition: all ease 500ms;
     }
 
-    .contact_btn:hover{
+    .contact_btn:hover {
         box-shadow: 0px 0px 20px #07ACE6;
         transition: all ease 500ms;
         width: 18em;
