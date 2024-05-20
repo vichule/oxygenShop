@@ -137,7 +137,7 @@ document.getElementById('formPop').addEventListener('submit', function (event) {
 		swal({
 			title: "Succes! You're now subscribed",
 			text: 'Thank you very much for your time!!',
-			
+
 		})
 	} else {
 		alert("Please complete all fields and check the box.");
@@ -145,7 +145,7 @@ document.getElementById('formPop').addEventListener('submit', function (event) {
 		// 	title: 'Error!',
 		// 	text: 'Please complete all fields and check the box.',
 		// })
-		
+
 	}
 
 });

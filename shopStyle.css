@@ -367,6 +367,7 @@
         margin: 2em 0em 2em 0em;
         position: relative;
         transition: all ease 500ms;
+        justify-content: center;
     }
 
 
@@ -458,7 +459,7 @@
         border: none;
         position: absolute;
         top: 91%;
-        left: 22%;
+        /* left: 22%; */
         font-family: 'Open Sans';
         font-weight: 700;
     }
@@ -473,7 +474,7 @@
         border: none;
         position: absolute;
         top: 91%;
-        left: 22%;
+        /* left: 22%; */
         font-family: 'Open Sans';
         font-weight: 700;
     }
@@ -489,7 +490,7 @@
         border: none;
         position: absolute;
         top: 91%;
-        left: 22%;
+        /* left: 22%; */
         font-family: 'Open Sans';
         font-weight: 700;
     }
@@ -674,6 +675,11 @@
         letter-spacing: 0px;
         text-align: left;
         margin: 0;
+
+    }
+
+    .footer__container_div2 img {
+        width: 30px;
     }
 
 
@@ -770,6 +776,11 @@
         width: 5em;
         border: none;
         margin-top: 1em;
+    }
+
+    .green2 {
+        background-color: #55DFB4;
+
     }
 
     /* breakpoint para evitar errores con estas dos clases */
@@ -894,7 +905,7 @@
 
         .benefits__container_div {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
 
         .benefits__container_items1 {
@@ -929,15 +940,13 @@
         }
 
         .green2 {
-            background-color: #55DFB4;
             width: 60%;
             height: 100%;
         }
 
         #trumpet {
-            position: absolute;
-            width: 20%;
-            right: 20em;
+            position: relative;
+            width: 90%;
             margin-top: 7em;
         }
 
@@ -949,7 +958,7 @@
             display: inline-block;
             z-index: 1;
             position: absolute;
-            margin: 3em 0em 0em 12em;
+            margin: 3em 0em 0em 10em;
         }
 
         #mac2 {
@@ -1162,32 +1171,5 @@
             left: 42%;
         }
 
-        .prices__choice {
-            margin-left: 13.5em;
-        }
-
-        .prices__choice2 {
-            margin-left: 13.5em;
-        }
-
-        .prices__choice3 {
-            margin-left: 13.5em;
-        }
-
-        .prices__price1 {
-            margin-left: 5.5em;
-        }
-
-        .prices__price2 {
-            margin-left: 5.5em;
-        }
-
-        .prices__price3 {
-            margin-left: 5.5em;
-        }
-
-        .limited_offer {
-            margin-left: 20em;
-        }
 
     }
